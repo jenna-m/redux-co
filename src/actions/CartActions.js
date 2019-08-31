@@ -17,6 +17,6 @@ export const minusQuantity = (id) => {
     return { type: MINUS_QUANTITY, id }
 };
 
-export const removeItem = (id) {
+export const removeItem = (id) => {
     return { type: REMOVE_ITEM, id }
 };
