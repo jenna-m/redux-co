@@ -3,7 +3,6 @@ import {
     HashRouter,
     Link,
     NavLink,
-    Route
 } from 'react-router-dom';
 
 class Navbar extends React.Component {
