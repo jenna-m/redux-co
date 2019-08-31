@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 class Home extends React.Component {
     render() {
         return (
-            <dlv className="contaier">
+            <dlv className="container">
                 <h3>Home</h3>
             </dlv>
         )
