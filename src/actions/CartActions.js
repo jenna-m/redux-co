@@ -1,15 +1,22 @@
-import { ADD_TO_CART } from '../constants/ActionTypes';
+import { 
+    ADD_TO_CART, 
+    REMOVE_ITEM, 
+    ADD_QUANTITY, 
+    MINUS_QUANTITY 
+} from '../constants/ActionTypes';
 
 export const addToCart = (id) => {
-    return {
-        type: ADD_TO_CART,
-        id
-    }
-}
+    return { type: ADD_TO_CART, id }
+};
 
-export const removeItem = 
+export const addQuantity = (id) => {
+    return { type: ADD_QUANTITY, id }
+};
 
-export const addQuantity = 
+export const minusQuantity = (id) => {
+    return { type: MINUS_QUANTITY, id }
+};
 
-export const minusQuantity = 
-
+export const removeItem = (id) {
+    return { type: REMOVE_ITEM, id }
+};
