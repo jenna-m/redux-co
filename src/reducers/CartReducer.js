@@ -4,6 +4,7 @@ import Item3 from '../images/item3.png';
 import Item4 from '../images/item4.png';
 import Item5 from '../images/item5.png';
 import Item6 from '../images/item6.png';
+import { ADD_TO_CART } from '../constants/ActionTypes';
 
 const initState = {
     items: [
@@ -55,7 +56,32 @@ const initState = {
 }
 
 const cartReducer = (state = initState, action) => {
-    return state;
+    // If item is added to cart...
+    if (action.type === ADD_TO_CART) {
+        let addedItem = state.items.find(item => item.id === action.id);
+        let existedItem = state.addedItems.find(item => action.id === item.id);
+
+        // Check if item already exists in cart
+        // If item is already in cart, increase quantity by 1, and calculate cart total
+        if (existedItem) {
+            addedItem.quantity += 1;
+            return {
+                ...state,
+                total: state.total + addedItem.price
+            }
+        } else {
+            // Add item to cart and calculate cart total...
+            addedItem.quantity = 1;
+            let newTotal = state.total + addedItem.price;
+            return {
+                ...state,
+                addedItems: [...state.addedItems, addedItem],
+                total: newTotal
+            }
+        }
+    } else {
+        return state;
+    }
 }
 
 export default cartReducer;
