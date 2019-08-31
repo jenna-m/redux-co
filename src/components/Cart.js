@@ -1,7 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addQuantity, minusQuantity, removeItem } from '../actions/CartActions';
+import { 
+    addQuantity,
+    minusQuantity, 
+    removeItem 
+} from '../actions/CartActions';
 
 const mapStateToProps = (state) => {
     return {
@@ -52,10 +56,21 @@ class Cart extends React.Component {
                         </div>
 
                         <div className="add-remove">
-                            <Link to="/cart"><i class="fa fa-plus-circle" onClick={ () => {this.handleAddQuantity(item.id)} }></i></Link>
-                            <Link to="/cart"><i class="fa fa-minus-circle" onClick={ () => {this.handleMinusQuantity(item.id)} }></i></Link>
+                            <Link to="/cart">
+                                <i class="fa fa-plus-circle"
+                                onClick={ () => {this.handleAddQuantity(item.id)} }
+                                ></i>
+                            </Link>
+                            <Link to="/cart">
+                                <i class="fa fa-minus-circle" 
+                                onClick={ () => {this.handleMinusQuantity(item.id)} }
+                                ></i>
+                            </Link>
                         </div>
-                        <button className="remove"><i class="fa fa-times-circle" onClick={ () => {this.handleRemoveItem(item.id)} }></i></button>
+                        <button className="remove">
+                            <i class="fa fa-times-circle" 
+                            onClick={ () => {this.handleRemoveItem(item.id)} }></i>
+                        </button>
                     </li>
                 )
             })
