@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { addQuantity, minusQuantity, removeItem } from '../actions/CartActions';
 
 const mapStateToProps = (state) => {
     return {
@@ -8,7 +9,30 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addQuantity: (id) => {dispatch(addQuantity(id))},
+        minusQuantity: (id) => {dispatch(minusQuantity(id))},
+        removeItem: (id) => {dispatch(removeItem(id))}
+    }
+}
+
 class Cart extends React.Component {
+    // Increase item quantity
+    handleAddQuantity = (id) => {
+        this.props.addQuantity(id)
+    }
+
+    // Decrease item quantity
+    handleMinusQuantity = (id) => {
+        this.props.minusQuantity(id)
+    }
+
+    // Remove item
+    handleRemoveItem = (id) => {
+        this.props.removeItem(id)
+    }
+
     render() {
         // If there are items in cart, display those items
         let addedItems = this.props.items.length ?
@@ -54,4 +78,4 @@ class Cart extends React.Component {
     }
 }
 
-export default connect(mapStateToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
