@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   background-color: #ffffff;
   color: #000000;
   font-family: 'Futura', sans-serif;
@@ -6,20 +7,23 @@ body {
 }
 
 /* Navigation Bar */
-.nav-wrapper {
+.navbar {
   margin: 0;
   padding: 0;
+  width: 100%;
+  border-bottom: 4px solid #000000;
 }
 
-.container {
+.nav-container {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  background-color: #eeeeee;
+  justify-content: space-between;
 }
 
 .brand-logo {
-  padding: 25px 25px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px 50px;
   color: #1a1a1d;
   text-decoration: none;
 }
@@ -31,8 +35,8 @@ body {
 
 .menu li {
   display: flex;
-  justify-content: space-evenly;
-  justify-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 50px;
   list-style: none;
 }
 
@@ -42,4 +46,41 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 3px solid #e3e3e3;
+  transition: border-bottom .1s linear .1s;
+}
+
+.menu a:hover {
+  border-bottom: 3px solid #bdbdbd;
+}
+
+/* Items for Sale */
+.item-card {
+  width: 350px;
+}
+
+.item-image img {
+  width: 350px;
+}
+
+/* New Arrivals Section */
+.new-arrivals {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.new-arrivals h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2.6em;
+  color: #e85a4f;
+  text-transform: lowercase;
+}
+
+.new-arrivals-items {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
