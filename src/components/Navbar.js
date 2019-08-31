@@ -9,14 +9,14 @@ class Navbar extends React.Component {
     render() {
         return(
             <HashRouter>
-                <nav className="nav-wrapper">
-                    <div className="container">
-                        <Link to="/" className="brand-logo">Shopping</Link>
+                <nav className="navbar">
+                    <div className="nav-container">
+                        <Link to="/" className="brand-logo">Shopping App</Link>
 
                         <ul className="menu">
                             <li><NavLink to="/">Shop</NavLink></li>
                             <li><NavLink to="/cart">My Cart</NavLink></li>
-                            <li><NavLink to="/cart"><i className="material-icons">shopping_cart</i></NavLink></li>
+                            <li><NavLink to="/cart"><i class="fas fa-shopping-cart"></i></NavLink></li>
                         </ul>
                     </div>
                 </nav>
