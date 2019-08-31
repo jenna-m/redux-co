@@ -4,7 +4,12 @@ import Item3 from '../images/item3.png';
 import Item4 from '../images/item4.png';
 import Item5 from '../images/item5.png';
 import Item6 from '../images/item6.png';
-import { ADD_TO_CART } from '../constants/ActionTypes';
+import { 
+    ADD_TO_CART,
+    REMOVE_ITEM, 
+    ADD_QUANTITY, 
+    MINUS_QUANTITY
+} from '../constants/ActionTypes';
 
 const initState = {
     items: [
@@ -62,7 +67,7 @@ const cartReducer = (state = initState, action) => {
         let existedItem = state.addedItems.find(item => action.id === item.id);
 
         // Check if item already exists in cart
-        // If item is already in cart, increase quantity by 1, and calculate cart total
+        // If item is already in cart, increase quantity by 1, and calculate total
         if (existedItem) {
             addedItem.quantity += 1;
             return {
@@ -70,7 +75,7 @@ const cartReducer = (state = initState, action) => {
                 total: state.total + addedItem.price
             }
         } else {
-            // Add item to cart and calculate cart total...
+            // Add item to cart and calculate total
             addedItem.quantity = 1;
             let newTotal = state.total + addedItem.price;
             return {
@@ -79,8 +84,57 @@ const cartReducer = (state = initState, action) => {
                 total: newTotal
             }
         }
-    } else {
-        return state;
+    }
+    
+    //If item is removed from cart, remove item and recalculate total
+    if (action.type === REMOVE_ITEM) {
+        let itemToRemove = state.addedItems.find(item => action.id === item.id);
+        let newItems = state.addedItems.filter(item => action.id !== item.id);
+
+        let newTotal = state.total - (itemToRemove.price * itemToRemove.quantity);
+        console.log(itemToRemove);
+        return {
+            ...state,
+            addedItems: newItems,
+            total: newTotal
+        }
+    }
+    
+    // If item quantity is increased, increase quantity by 1 and recalculate total
+    if (action.type === ADD_QUANTITY) {
+        let addedItem = state.items.find(item => item.id === action.id);
+        
+        addedItem.quantity += 1;
+
+        let newTotal = state.total + addedItem.price;
+        return {
+            ...state,
+            total: newTotal
+        }
+
+    }
+
+    // If item quantity is decreased, subtract quantity and recalculate total
+    if (action.type === MINUS_QUANTITY) {
+        let addedItem = state.items.find(item => item.id === action.id);
+        if (addedItem.quantity === 1) {
+            let newItems = state.addedItems.filter(item => item.id !== action.id);
+            let newTotal = state.total - addedItem.price;
+            return {
+                ...state,
+                addedItems: newItems,
+                total: newTotal
+            }
+        } else {
+            addedItem.quantity -= 1;
+            let newTotal = state.total - addedItem.price;
+            return {
+                ...state,
+                total: newTotal
+            }
+        }
+    }
+    return state;
     }
 }
 
