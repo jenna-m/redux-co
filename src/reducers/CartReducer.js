@@ -1,9 +1,9 @@
-import Item1 from '../../images/item1.jpg';
-import Item2 from '../../images/item2.jpg';
-import Item3 from '../../images/item3.jpg';
-import Item4 from '../../images/item4.jpg';
-import Item5 from '../../images/item5.jpg';
-import Item6 from '../../images/item6.jpg';
+import Item1 from '../images/item1.png';
+import Item2 from '../images/item2.png';
+import Item3 from '../images/item3.png';
+import Item4 from '../images/item4.png';
+import Item5 from '../images/item5.png';
+import Item6 from '../images/item6.png';
 
 const initState = {
     items: [
