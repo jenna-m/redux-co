@@ -1,15 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from '../App';
-import cartReducer from '../reducers/CartReducer';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
-const store = createStore(cartReducer);
+class Home extends React.Component {
+    render() {
+        return (
+            <dlv className="contaier">
+                <h3>Home</h3>
+            </dlv>
+        )
+    }
+}
 
-ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>,
-    document.getElementById('root')
-);
+export default Home;
