@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { addToCart } from '../actions/action-types/CartActions';
 
 const mapStateToProps = (state) => {
     return {
@@ -7,7 +8,18 @@ const mapStateToProps = (state) => {
     };
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCart: (id) => { dispatch(addToCart(id)) }
+    }
+}
+
 class Home extends React.Component {
+
+    handleClick = (id) => {
+        this.props.addToCart(id);
+    }
+
     render() {
         let itemList = this.props.items.map(item =>{
             return (
@@ -15,12 +27,12 @@ class Home extends React.Component {
                     <div className="item-image">
                         <img src={item.img} alt={item.title} />
                         <span className="item-title">{item.title}</span>
-                        <span className="add-item">+</span>
                     </div>
                     
                     <div className="card-component">
                         <p>{item.desc}</p>
                         <p><b>${item.price}</b></p>
+                        <span to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></span>
                     </div>
                 </div>
             )
@@ -37,4 +49,4 @@ class Home extends React.Component {
     }
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
