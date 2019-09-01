@@ -8,7 +8,10 @@ import {
     ADD_TO_CART,
     REMOVE_ITEM, 
     ADD_QUANTITY, 
-    MINUS_QUANTITY
+    MINUS_QUANTITY,
+    ADD_SHIPPING,
+    SUBTRACT_SHIPPING,
+    shippingCost
 } from '../constants/ActionTypes';
 
 const initState = {
@@ -134,6 +137,22 @@ const cartReducer = (state = initState, action) => {
             }
         }
     }
+
+    // Logic to add and subtract shipping costs
+    if (action.type === ADD_SHIPPING) {
+        return{
+            ...state,
+            total: state.total + shippingCost
+        }
+    }
+
+    if (action.type === SUBTRACT_SHIPPING) {
+        return {
+            ...state,
+            total: state.total - shippingCost
+        }
+    }
+    
     return state;
 }
 
