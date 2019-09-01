@@ -38,6 +38,20 @@ const dispatchStateToProps = (dispatch) => {
     }
 }
 
+componentWillUnmount() {
+    if (this.refs.shipping.checked) {
+        this.props.subtractShipping();
+    }
+}
+
+handleChecked = (e) => {
+    if (e.target.checked) {
+        this.props.addShipping();
+    } else {
+        this.props.subtractShipping();
+    }
+}
+
 class CalculateTotal extends React.Component {
     handleChecked = (e) => {
         if (e.target.checked) {
@@ -50,14 +64,14 @@ class CalculateTotal extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="collection">
-                    <li className="collection-item">
+                <div className="shipping-section">
+                    <li className="shipping-item">
                         <label>
                             <input type="checkbox" ref="shipping" onChange={this.handleChecked} />
                             <span>Shipping ($10)</span>
                         </label>
                     </li>
-                    <li className="collection-item">
+                    <li className="shipping-item">
                         <p>Total: ${this.props.total}</p>
                     </li>
                 </div>
