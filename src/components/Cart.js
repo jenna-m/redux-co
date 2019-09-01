@@ -48,9 +48,9 @@ class Cart extends React.Component {
                             <img src={item.img} alt={item.title} />
                         </div>
 
-                        <div className="cart-item-desc">
+                        <div className="cart-item-info">
                             <span className="cart-title">{item.title}</span>
-                            <p>{item.desc}</p>
+                            <p class="cart-item-desc">{item.desc}</p>
                             <p>Price: ${item.price}</p>
                             <p>Quantity: {item.quantity}</p>
                         </div>
@@ -77,13 +77,13 @@ class Cart extends React.Component {
         ):
         // If there are no items in cart, display the following message
         (
-            <div class="shopping-message">Nothing!</div>
+            <div class="shopping-message">Nothing</div>
         )
 
         return (
             <div className="container">
+                <h1>In your cart, there's...</h1>
                 <div className="cart">
-                    <h1>In your cart, there's...</h1>
                     <ul classname="collection">
                         {addedItems}
                     </ul>
