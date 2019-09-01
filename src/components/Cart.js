@@ -43,13 +43,13 @@ class Cart extends React.Component {
         let addedItems = this.props.items.length ? (
             this.props.items.map(item => {
                 return (
-                    <li className="item-in-cart">
-                        <div className="item-img">
+                    <li className="cart-item-card">
+                        <div className="cart-item-image">
                             <img src={item.img} alt={item.title} />
                         </div>
 
-                        <div className="item-desc">
-                            <span className="title">{item.title}</span>
+                        <div className="cart-item-desc">
+                            <span className="cart-title">{item.title}</span>
                             <p>{item.desc}</p>
                             <p>Price: ${item.price}</p>
                             <p>Quantity: {item.quantity}</p>
@@ -67,23 +67,23 @@ class Cart extends React.Component {
                                 ></i>
                             </Link>
                         </div>
-                        <button className="remove">
+                        <div className="remove">
                             <i class="fa fa-times-circle" 
                             onClick={ () => {this.handleRemoveItem(item.id)} }></i>
-                        </button>
+                        </div>
                     </li>
                 )
             })
         ):
         // If there are no items in cart, display the following message
         (
-            <p>Nothing. Get to shopping!</p>
+            <div class="shopping-message">Nothing!</div>
         )
 
         return (
             <div className="container">
                 <div className="cart">
-                    <h5>You have ordered:</h5>
+                    <h1>In your cart, there's...</h1>
                     <ul classname="collection">
                         {addedItems}
                     </ul>
