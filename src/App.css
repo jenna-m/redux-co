@@ -69,7 +69,7 @@ body {
   align-content: space-between;
 }
 
-.new-arrivals h3 {
+.new-arrivals h1 {
   display: flex;
   justify-content: center;
   font-size: 2.6em;
@@ -84,3 +84,45 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* Items in cart */
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: space-between;
+  align-items: flex-start;
+}
+
+.cart h1 {
+  font-size: 1.4em;
+}
+
+.cart-item-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  width: 525px;
+}
+
+.cart-item-image img {
+  width: 225px;
+}
+
+.cart-item-desc {
+  width: 300px;
+  font-size: .7em;
+}
+
+.cart-title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.shopping-message {
+  font-family: 'Times New Roman', serif;
+  text-transform: lowercase;
+  font-style: italic;
+  font-size: 3em;
+} 
