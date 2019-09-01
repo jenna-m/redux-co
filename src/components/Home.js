@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { addToCart } from '../actions/CartActions';
 
 const mapStateToProps = (state) => {
@@ -31,7 +32,7 @@ class Home extends React.Component {
                     
                     <div className="card-component">
                         <p>{item.desc}</p>
-                        <p><b>${item.price}</b> <a href="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></a></p>
+                        <p><b>${item.price}</b> <Link to="/cart" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link></p>
                     </div>
                 </div>
             )
@@ -39,7 +40,7 @@ class Home extends React.Component {
 
         return (
             <div className="new-arrivals">
-                <h3>New Arrivals</h3>
+                <h1>New Arrivals</h1>
                 <div className="new-arrivals-items">
                     {itemList}
                 </div>
