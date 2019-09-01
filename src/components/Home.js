@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../actions/action-types/CartActions';
+import { addToCart } from '../actions/CartActions';
 
 const mapStateToProps = (state) => {
     return {
@@ -31,8 +31,7 @@ class Home extends React.Component {
                     
                     <div className="card-component">
                         <p>{item.desc}</p>
-                        <p><b>${item.price}</b></p>
-                        <span to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></span>
+                        <p><b>${item.price}</b> <a href="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></a></p>
                     </div>
                 </div>
             )
