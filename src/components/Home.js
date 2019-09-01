@@ -38,12 +38,12 @@ class Home extends React.Component {
         })
 
         return (
-            <dlv className="new-arrivals">
+            <div className="new-arrivals">
                 <h3>New Arrivals</h3>
                 <div className="new-arrivals-items">
                     {itemList}
                 </div>
-            </dlv>
+            </div>
         )
     }
 }
