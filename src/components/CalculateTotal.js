@@ -5,21 +5,6 @@ import {
     SUBTRACT_SHIPPING
 } from '../constants/ActionTypes';
 
-componentWillUnmount() {
-    if(this.refs.shipping.checked) {
-        this.props.subtractShipping();
-    }
-}
-
-handleChecked = (e) => {
-    if (e.target.checked) {
-        this.props.addShipping();
-    } else {
-        this.props.subtractShipping();
-    }
-}
-
-
 const mapStateToProps = (state) => {
     return {
         addedItems: state.addedItems,
