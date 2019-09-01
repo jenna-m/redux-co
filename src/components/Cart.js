@@ -6,6 +6,7 @@ import {
     minusQuantity, 
     removeItem 
 } from '../actions/CartActions';
+import CalculateTotal from './CalculateTotal';
 
 const mapStateToProps = (state) => {
     return {
@@ -88,6 +89,7 @@ class Cart extends React.Component {
                         {addedItems}
                     </ul>
                 </div>
+                <CalculateTotal />
             </div>
         )
     }
