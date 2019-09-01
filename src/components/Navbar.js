@@ -1,7 +1,6 @@
 import React from 'react';
 import { 
     HashRouter,
-    Link,
     NavLink,
 } from 'react-router-dom';
 
@@ -11,12 +10,12 @@ class Navbar extends React.Component {
             <HashRouter>
                 <nav className="navbar">
                     <div className="nav-container">
-                        <Link to="/" className="brand-logo">Shopping App</Link>
+                        <NavLink exact to="/" className="brand-logo">Shopping App</NavLink>
 
                         <ul className="menu">
-                            <li><NavLink to="/">Shop</NavLink></li>
-                            <li><NavLink to="/cart">My Cart</NavLink></li>
-                            <li><NavLink to="/cart"><i class="fa fa-shopping-cart"></i></NavLink></li>
+                            <li><NavLink exact to="/">Shop</NavLink></li>
+                            <li><NavLink exact to="/cart">My Cart</NavLink></li>
+                            <li><NavLink exact to="/cart"><i class="fa fa-shopping-cart"></i></NavLink></li>
                         </ul>
                     </div>
                 </nav>
