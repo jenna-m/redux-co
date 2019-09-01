@@ -32,7 +32,7 @@ class Home extends React.Component {
                     
                     <div className="card-component">
                         <p>{item.desc}</p>
-                        <p><b>${item.price}</b> <Link to="/cart" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link></p>
+                        <p><b>${item.price}</b> <Link to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link></p>
                     </div>
                 </div>
             )
