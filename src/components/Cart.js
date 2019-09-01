@@ -25,23 +25,22 @@ const mapDispatchToProps = (dispatch) => {
 class Cart extends React.Component {
     // Increase item quantity
     handleAddQuantity = (id) => {
-        this.props.addQuantity(id)
+        this.props.addQuantity(id);
     }
 
     // Decrease item quantity
     handleMinusQuantity = (id) => {
-        this.props.minusQuantity(id)
+        this.props.minusQuantity(id);
     }
 
     // Remove item
     handleRemoveItem = (id) => {
-        this.props.removeItem(id)
+        this.props.removeItem(id);
     }
 
     render() {
         // If there are items in cart, display those items
-        let addedItems = this.props.items.length ?
-        (
+        let addedItems = this.props.items.length ? (
             this.props.items.map(item => {
                 return (
                     <li className="item-in-cart">
