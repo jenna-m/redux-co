@@ -24,7 +24,12 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-class CalculateTotal extends React.Component {    
+class CalculateTotal extends React.Component {
+    componentWillUnmount() {
+        if (this.refs.shipping.checked)
+        this.props.subtractShipping();
+    }    
+
     handleChecked = (e) => {
         if (e.target.checked) {
             this.props.addShipping();
