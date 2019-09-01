@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {
     ADD_SHIPPING,
-    SUBTRACT_SHIPPING
+    SUBTRACT_SHIPPING,
+    shippingCost
 } from '../constants/ActionTypes';
 
 const mapStateToProps = (state) => {
@@ -23,7 +24,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-class CalculateTotal extends React.Component {
+class CalculateTotal extends React.Component {    
     handleChecked = (e) => {
         if (e.target.checked) {
             this.props.addShipping();
@@ -39,7 +40,7 @@ class CalculateTotal extends React.Component {
                     <li className="shipping-item">
                         <label>
                             <input type="checkbox" ref="shipping" onChange={this.handleChecked} />
-                            <span>Shipping ($10)</span>
+                            <span>Shipping (${shippingCost})</span>
                         </label>
                     </li>
                     <li className="shipping-item">
