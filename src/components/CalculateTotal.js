@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const dispatchStateToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         addShipping: () => {
             dispatch({type: ADD_SHIPPING})
@@ -20,20 +20,6 @@ const dispatchStateToProps = (dispatch) => {
         subtractShipping: () => {
             dispatch({type: SUBTRACT_SHIPPING})
         }
-    }
-}
-
-componentWillUnmount() {
-    if (this.refs.shipping.checked) {
-        this.props.subtractShipping();
-    }
-}
-
-handleChecked = (e) => {
-    if (e.target.checked) {
-        this.props.addShipping();
-    } else {
-        this.props.subtractShipping();
     }
 }
 
@@ -69,4 +55,4 @@ class CalculateTotal extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, dispatchStateToProps)(CalculateTotal);
+export default connect(mapStateToProps, mapDispatchToProps)(CalculateTotal);
