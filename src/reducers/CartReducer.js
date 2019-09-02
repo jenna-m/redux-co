@@ -32,9 +32,9 @@ const initState = {
         },
         {
             id: 3,
-            title: 'Boardwalk Sandals',
+            title: 'Black Chelsea Boots',
             desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
-            price: 90,
+            price: 120,
             img: Item3
         },
         {
