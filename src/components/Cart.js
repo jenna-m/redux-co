@@ -77,7 +77,9 @@ class Cart extends React.Component {
         ):
         // If there are no items in cart, display the following message
         (
-            <div class="shopping-message">Nothing</div>
+            <div class="shopping-message">
+                <p>Nothing</p>
+                <a class="button" href="/">Start shopping</a></div>
         )
 
         return (
