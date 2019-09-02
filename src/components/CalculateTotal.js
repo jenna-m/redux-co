@@ -55,7 +55,7 @@ class CalculateTotal extends React.Component {
                 </div>
 
                 <div className="checkout">
-                    <button className="checkout-btn">Checkout</button>
+                    <a class="button" href="/">Checkout</a>
                 </div>
             </div>
         )
