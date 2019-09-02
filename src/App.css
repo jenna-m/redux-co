@@ -11,7 +11,8 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  border-bottom: 4px solid #000000;
+  background-color: #000000;
+  color: #ffffff
 }
 
 .nav-container {
@@ -24,7 +25,7 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 20px 50px;
-  color: #1a1a1d;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -41,20 +42,24 @@ body {
 }
 
 .menu a {
-  color: #1a1a1d;
+  color: #ffffff;
   font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 3px solid #e3e3e3;
+  border-bottom: 3px solid #000000;
   transition: border-bottom .1s linear .1s;
 }
 
 .menu a:hover {
-  border-bottom: 3px solid #bdbdbd;
+  border-bottom: 3px solid #ffffff;
 }
 
 /* Shopping cart FA icon */
 .cart-icon a {
+  border-bottom: 0px;
+}
+
+.cart-icon a:hover {
   border-bottom: 0px;
 }
 
@@ -73,22 +78,23 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   justify-items: space-between;
+  width: 100%;
 }
 
 .new-arrivals-section h1 {
+  margin-bottom: 75px;
   font-size: 2.6em;
-  color: #e85a4f;
+  color: #1a1a1d;
   text-transform: lowercase;
-  font-style: italic;
 }
 
 .new-arrivals-items {
-  width: 800px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 100%;
 }
+
 
 /* Items in cart */
 h1 {
