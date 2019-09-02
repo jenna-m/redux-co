@@ -6,7 +6,7 @@ class Navbar extends React.Component {
         return(
             <nav className="navbar">
                 <div className="nav-container">
-                    <NavLink exact to="/" className="brand-logo">Shopping App</NavLink>
+                    <NavLink exact to="/" className="brand-logo">[ REDUX Co. ]</NavLink>
                     <ul className="menu">
                         <li><NavLink exact to="/">Shop</NavLink></li>
                         <li><NavLink to="/cart">My Cart</NavLink></li>
