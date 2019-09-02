@@ -9,8 +9,8 @@ class Navbar extends React.Component {
                     <NavLink exact to="/" className="brand-logo">redux Co.</NavLink>
                     <ul className="menu">
                         <li><NavLink exact to="/">Shop</NavLink></li>
-                        <li><NavLink to="/cart">My Cart</NavLink></li>
-                        <li class="cart-icon"><NavLink to="/cart"><i class="fa fa-shopping-cart"></i></NavLink></li>
+                        <li><NavLink to="/cart">My Bag</NavLink></li>
+                        <li class="cart-icon"><NavLink to="/cart"><i class="fa fa-shopping-bag"></i></NavLink></li>
                     </ul>
                 </div>
             </nav>
