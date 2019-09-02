@@ -27,12 +27,12 @@ class Home extends React.Component {
                 <div className="item-card" key={item.id}>
                     <div className="item-image">
                         <img src={item.img} alt={item.title} />
-                        <span className="item-title">{item.title}</span>
                     </div>
-                    
                     <div className="card-component">
-                        <p>{item.desc}</p>
-                        <p><b>${item.price}</b> <Link to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link></p>
+                        <span className="item-title">{item.title}</span>
+                        <Link to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link>
+                        <p className="item-price"><b>${item.price}</b></p>
+                        <p className="item-desc">{item.desc}</p>
                     </div>
                 </div>
             )
