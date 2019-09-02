@@ -42,14 +42,15 @@ class CalculateTotal extends React.Component {
         return (
             <div className="shipping-container">
                 <div className="shipping-section">
+                    <h3>Finalize Your Order</h3>
                     <li className="shipping-item">
                         <label>
                             <input type="checkbox" ref="shipping" onChange={this.handleChecked} />
-                            <span>Shipping (${shippingCost})</span>
+                            <span className="ShippingCost">Shipping (${shippingCost})</span>
                         </label>
                     </li>
                     <li className="shipping-item">
-                        <p>Total: ${this.props.total}</p>
+                        <p className="cart-total">Total: ${this.props.total}</p>
                     </li>
                 </div>
 
