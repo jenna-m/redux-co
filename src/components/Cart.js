@@ -53,23 +53,19 @@ class Cart extends React.Component {
                             <p class="cart-item-desc">{item.desc}</p>
                             <p class="cart-item-price">Price: ${item.price}</p>
                             <p class="cart-item-qty">Quantity: {item.quantity}</p>
-                        </div>
 
-                        <div className="add-remove">
                             <Link to="/cart">
-                                <i class="fa fa-plus-circle"
+                                <span class="add-minus-btn"><i class="fa fa-plus-circle"
                                 onClick={ () => {this.handleAddQuantity(item.id)} }
-                                ></i>
+                                ></i></span>
                             </Link>
                             <Link to="/cart">
-                                <i class="fa fa-minus-circle" 
+                            <span class="add-minus-btn"><i class="fa fa-minus-circle" 
                                 onClick={ () => {this.handleMinusQuantity(item.id)} }
-                                ></i>
+                                ></i></span>
                             </Link>
-                        </div>
-                        <div className="remove">
-                            <i class="fa fa-times-circle" 
-                            onClick={ () => {this.handleRemoveItem(item.id)} }></i>
+                            <span class="add-minus-btn"><i class="fa fa-times-circle" 
+                            onClick={ () => {this.handleRemoveItem(item.id)} }></i></span>
                         </div>
                     </li>
                 )
