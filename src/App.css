@@ -149,12 +149,33 @@ h1 {
   font-size: 3em;
 }
 
-/* Shipping options section */
+/* Shipping section */
+.shipping-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.shipping-section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .shipping-item {
   list-style: none;
 }
 
+
+
 /* Checkout button */
+.checkout {
+  display: inline-block;
+  margin: 0 auto;
+  width: 200px;
+  padding-top: 30px;
+}
+
 .checkout button {
   padding: 15px 25px;
   background-color: #ffffff;
