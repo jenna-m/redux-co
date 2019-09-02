@@ -102,6 +102,28 @@ h1 {
   width: 350px;
 }
 
+.item-title {
+  text-transform: uppercase;
+  font-weight: 550;
+  letter-spacing: .1em;
+}
+
+.add-item {
+  margin-left: 20px;
+  color: #1a1a1d;
+}
+
+.item-price {
+  line-height: .1em;
+  font-size: .8em;
+}
+
+.item-desc {
+  font-family: 'Times New Roman', sans-serif;
+  font-style: italic;
+  font-size: 1em;
+}
+
 
 /* New Arrivals Section */
 .new-arrivals-section {
@@ -161,6 +183,13 @@ h1 {
 .cart-item-price, 
 .cart-item-qty {
   font-size: 1.1em;
+}
+
+.add-minus-btn {
+  cursor: pointer;
+  padding: 5px;
+  color: #1a1a1d;
+  font-size: 1.15rem;
 }
 
 
