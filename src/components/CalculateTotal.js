@@ -40,7 +40,7 @@ class CalculateTotal extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="shipping-container">
                 <div className="shipping-section">
                     <li className="shipping-item">
                         <label>
