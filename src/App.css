@@ -14,6 +14,26 @@ h1 {
   text-align: center;
 }
 
+.button {
+  padding: 15px 25px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  color: #000000;
+  font-family: 'Futura', sans-serif;
+  letter-spacing: .4em;
+  font-size: .8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
 /* Navigation Bar */
 .navbar {
   margin: 0;
@@ -62,6 +82,7 @@ h1 {
   border-bottom: 3px solid #ffffff;
 }
 
+
 /* Shopping cart FA icon */
 .cart-icon a {
   border-bottom: 0px;
@@ -71,6 +92,7 @@ h1 {
   border-bottom: 0px;
 }
 
+
 /* Items for Sale */
 .item-card {
   width: 350px;
@@ -79,6 +101,7 @@ h1 {
 .item-image img {
   width: 350px;
 }
+
 
 /* New Arrivals Section */
 .new-arrivals-section {
@@ -140,8 +163,9 @@ h1 {
   font-size: 1.1em;
 }
 
+
 /* Message displayed when cart is empty */
-.shopping-message {
+.shopping-message p {
   text-align: center;
   font-family: 'Times New Roman', serif;
   text-transform: lowercase;
@@ -149,6 +173,7 @@ h1 {
   font-style: italic;
   font-size: 3em;
 }
+
 
 /* Shipping section */
 .shipping-container {
@@ -190,22 +215,4 @@ h1 {
   width: 200px;
   padding-top: 30px;
   padding-bottom: 100px;
-}
-
-.checkout button {
-  padding: 15px 25px;
-  background-color: #ffffff;
-  border: 2px solid #000000;
-  color: #000000;
-  font-family: 'Futura', sans-serif;
-  letter-spacing: .4em;
-  font-size: .8em;
-  text-transform: uppercase;
-  transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
-}
-
-.checkout button:hover {
-  cursor: pointer;
-  background-color: #000000;
-  color: #ffffff;
 }
