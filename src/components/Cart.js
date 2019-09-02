@@ -51,8 +51,8 @@ class Cart extends React.Component {
                         <div className="cart-item-info">
                             <span className="cart-title">{item.title}</span>
                             <p class="cart-item-desc">{item.desc}</p>
-                            <p class="cart-item-price">Price: ${item.price}</p>
-                            <p class="cart-item-qty">Quantity: {item.quantity}</p>
+                            <p class="cart-item-price">${item.price}</p>
+                            <p class="cart-item-qty">Qty: {item.quantity}</p>
 
                             <Link to="/cart">
                                 <span class="add-minus-btn"><i class="fa fa-plus-circle"
@@ -75,7 +75,7 @@ class Cart extends React.Component {
         (
             <div class="shopping-message">
                 <p>Nothing</p>
-                <a class="button" href="/">Start shopping</a></div>
+                <a class="button" href="/">Start shopping!</a></div>
         )
 
         return (
