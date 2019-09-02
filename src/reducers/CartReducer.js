@@ -11,7 +11,8 @@ import {
     MINUS_QUANTITY,
     ADD_SHIPPING,
     SUBTRACT_SHIPPING,
-    shippingCost
+    shippingCost,
+    ADD_PICKUP
 } from '../constants/ActionTypes';
 
 const initState = {
@@ -150,6 +151,14 @@ const cartReducer = (state = initState, action) => {
         return {
             ...state,
             total: state.total - shippingCost
+        }
+    }
+
+    // Logic for in-store pickup
+    if (action.type === ADD_PICKUP) {
+        return{
+            ...state,
+            total: state.total
         }
     }
     

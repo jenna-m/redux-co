@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import {
     ADD_SHIPPING,
     SUBTRACT_SHIPPING,
-    shippingCost
+    shippingCost,
+    ADD_PICKUP
 } from '../constants/ActionTypes';
 
 const mapStateToProps = (state) => {
@@ -20,6 +21,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         subtractShipping: () => {
             dispatch({type: SUBTRACT_SHIPPING})
+        },
+        addPickup: () => {
+            dispatch({type: ADD_PICKUP})
         }
     }
 }
@@ -28,9 +32,9 @@ class CalculateTotal extends React.Component {
     componentWillUnmount() {
         if (this.refs.shipping.checked)
         this.props.subtractShipping();
-    }    
+        }    
 
-    handleChecked = (e) => {
+    handleShipping = (e) => {
         if (e.target.checked) {
             this.props.addShipping();
         } else {
@@ -38,15 +42,29 @@ class CalculateTotal extends React.Component {
         }
     }
 
+    handlePickup = (e) => {
+        if (e.target.checked) {
+            this.props.addPickup();
+        }
+    }
+
     render() {
         return (
             <div className="shipping-container">
                 <div className="shipping-section">
-                    <h3>Finalize Your Order</h3>
+                    <div className="shipping-message">
+                        <h3>Finalize Your Order</h3>
+                    </div>
                     <li className="shipping-item">
                         <label>
-                            <input type="checkbox" ref="shipping" onChange={this.handleChecked} />
+                            <input type="checkbox" ref="shipping" onChange={this.handleShipping} />
                             <span className="ShippingCost">Shipping (${shippingCost})</span>
+                        </label>
+                    </li>
+                    <li className="shipping-item">
+                        <label>
+                            <input type="checkbox" ref="pickup" onChange={this.handlePickup} />
+                            <span className="ShippingCost">In-store pickup (free!)</span>
                         </label>
                     </li>
                     <li className="shipping-item">
