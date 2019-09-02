@@ -185,18 +185,28 @@ h1 {
 
 .shipping-section {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
-.shipping-section h3 {
+.shipping-message {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.shipping-message h3 {
   font-family: 'Times New Roman', sans-serif;
   font-style: italic;
   font-size: 1.6em;
   font-weight: 200;
+  text-transform: lowercase;
 }
 
 .shipping-item {
   list-style: none;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .shipping-cost {
