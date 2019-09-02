@@ -20,42 +20,42 @@ const initState = {
         { 
             id: 1, 
             title: 'Black Eyelet Dress', 
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             price: 120,
             img: Item1
         },
         {
             id: 2,
             title: 'Halliday Sunglasses',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
+            desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
             price: 30,
             img: Item2
         },
         {
             id: 3,
             title: 'Black Chelsea Boots',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
+            desc: 'Posuere morbi leo urna molestie at elementum eu facilisis sed. At auctor urna nunc id cursus metus. Eu consequat ac felis donec et odio pellentesque.',
             price: 120,
             img: Item3
         },
         {
             id: 4,
             title: 'Chore Coat',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
+            desc: 'Dui sapien eget mi proin sed libero. Pharetra pharetra massa massa ultricies. Nisi scelerisque eu ultrices vitae auctor eu augue. Blandit cursus risus at ultrices.',
             price: 110,
             img: Item4
         },
         {
             id: 5,
             title: 'Sunset Crossbody Bag',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
+            desc: 'Eget nunc lobortis mattis aliquam faucibus purus. Nibh praesent tristique magna sit amet purus gravida quis.',
             price: 90,
             img: Item5
         },
         {
             id: 6,
             title: 'Perfect Shorts',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex.',
+            desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
             price: 70,
             img: Item6
         }
