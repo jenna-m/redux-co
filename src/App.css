@@ -54,6 +54,7 @@ h1 {
   justify-content: flex-start;
   padding: 20px 50px;
   color: #ffffff;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -239,11 +240,11 @@ h1 {
 }
 
 .shipping-cost {
-  font-size: .7em;
+  font-size: .5em;
 }
 
 .cart-total {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 
