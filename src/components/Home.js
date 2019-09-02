@@ -40,7 +40,7 @@ class Home extends React.Component {
 
         return (
             <div className="new-arrivals-section">
-                <h1>New Arrivals</h1>
+                <h1>What's new?</h1>
                 <div className="new-arrivals-items">
                     {itemList}
                 </div>
