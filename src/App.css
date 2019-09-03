@@ -6,12 +6,21 @@ body {
   font-size: 1.2em;
 }
 
+li {
+  list-style: none;
+}
+
 h1 {
   margin-bottom: 75px;
   font-size: 2.6em;
   color: #1a1a1d;
   text-transform: lowercase;
   text-align: center;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
 }
 
 .button {
@@ -67,7 +76,6 @@ h1 {
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
-  list-style: none;
 }
 
 .menu a {
@@ -84,13 +92,56 @@ h1 {
 }
 
 
-/* Shopping cart FA icon */
-.cart-icon a {
+/* Shopping bag FA icon */
+.bag-ico a a:hover {
   border-bottom: 0px;
 }
 
-.cart-icon a:hover {
+.bag-ico a:hover {
   border-bottom: 0px;
+}
+
+
+/* Footer section */
+.footer {
+  border-top: 1px solid #000000;
+  margin-top: 200px;
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  font-size: .7em;
+  line-height: 2em;
+  letter-spacing: .13em;
+}
+
+.heading {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  font-weight: 600;
+  border-bottom: 2px solid #1a1a1d;
+}
+
+.address {
+  line-height: .8em;
+}
+
+.github {
+  display: flex;
+  justify-content: center;
+  font-size: .65em;
+  color: #1a1a1d;
+}
+
+.github a {
+  text-decoration: underline;
+}
+
+.github a:hover {
+  text-decoration: none;
 }
 
 
@@ -155,7 +206,6 @@ h1 {
 .cart-item-card {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
   width: 575px;
 }
 
@@ -234,7 +284,6 @@ h1 {
 }
 
 .shipping-item {
-  list-style: none;
   margin: 0 auto;
   display: inline-block;
 }
