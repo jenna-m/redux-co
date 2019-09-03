@@ -8,6 +8,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/cart" component={Cart} />
           </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );
