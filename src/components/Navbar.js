@@ -10,7 +10,7 @@ class Navbar extends React.Component {
                     <ul className="menu">
                         <li><NavLink exact to="/">Shop</NavLink></li>
                         <li><NavLink to="/cart">My Bag</NavLink></li>
-                        <li class="cart-icon"><NavLink to="/cart"><i class="fa fa-shopping-bag"></i></NavLink></li>
+                        <li class="bag-ico"><NavLink to="/cart"><i class="fa fa-shopping-bag"></i></NavLink></li>
                     </ul>
                 </div>
             </nav>
