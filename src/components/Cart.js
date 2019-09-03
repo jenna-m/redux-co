@@ -8,6 +8,7 @@ import {
     minusQuantity, 
     removeItem 
 } from '../actions/CartActions';
+import Empty from './Empty';
 import Shipping from './Shipping';
 
 const mapStateToProps = (state) => {
@@ -45,39 +46,40 @@ class Cart extends React.Component {
         let addedItems = this.props.items.length ? (
             this.props.items.map(item => {
                 return (
-                    <li className="cart-item-card">
-                        <div className="cart-item-image">
-                            <img src={item.img} alt={item.title} />
-                        </div>
+                    <div>
+                        <li className="cart-item-card">
+                            <div className="cart-item-image">
+                                <img src={item.img} alt={item.title} />
+                            </div>
 
-                        <div className="cart-item-info">
-                            <span className="cart-title">{item.title}</span>
-                            <p class="cart-item-desc">{item.desc}</p>
-                            <p class="cart-item-price">${item.price}</p>
-                            <p class="cart-item-qty">Qty: {item.quantity}</p>
+                            <div className="cart-item-info">
+                                <span className="cart-title">{item.title}</span>
+                                <p class="cart-item-desc">{item.desc}</p>
+                                <p class="cart-item-price">${item.price}</p>
+                                <p class="cart-item-qty">Qty: {item.quantity}</p>
 
-                            <Link to="/cart">
-                                <span class="add-minus-btn"><i class="fa fa-plus-circle"
-                                onClick={ () => {this.handleAddQuantity(item.id)} }
-                                ></i></span>
-                            </Link>
-                            <Link to="/cart">
-                            <span class="add-minus-btn"><i class="fa fa-minus-circle" 
-                                onClick={ () => {this.handleMinusQuantity(item.id)} }
-                                ></i></span>
-                            </Link>
-                            <span class="add-minus-btn"><i class="fa fa-times-circle" 
-                            onClick={ () => {this.handleRemoveItem(item.id)} }></i></span>
-                        </div>
-                    </li>
+                                <Link to="/cart">
+                                    <span class="add-minus-btn"><i class="fa fa-plus-circle"
+                                    onClick={ () => {this.handleAddQuantity(item.id)} }
+                                    ></i></span>
+                                </Link>
+                                <Link to="/cart">
+                                <span class="add-minus-btn"><i class="fa fa-minus-circle" 
+                                    onClick={ () => {this.handleMinusQuantity(item.id)} }
+                                    ></i></span>
+                                </Link>
+                                <span class="add-minus-btn"><i class="fa fa-times-circle" 
+                                onClick={ () => {this.handleRemoveItem(item.id)} }></i></span>
+                            </div>
+                        </li>
+                        <Shipping />
+                    </div>
                 )
             })
         ):
-        // If there are no items in cart, display the following message
+        // If there are no items in cart, display the Empty component
         (
-            <div className="shopping-message">
-                <p>Nothing</p>
-                <a className="button" href="/">Start shopping!</a></div>
+            <Empty />
         )
 
         return (
@@ -88,7 +90,6 @@ class Cart extends React.Component {
                         {addedItems}
                     </ul>
                 </div>
-                <Shipping />
             </div>
         )
     }
