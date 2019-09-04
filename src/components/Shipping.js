@@ -29,10 +29,10 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class Shipping extends React.Component {
-    componentWillUnmount() {
-        if (this.refs.shipping.checked)
-        this.props.subtractShipping();
-        }    
+    // componentWillUnmount() {
+    //     if (this.refs.shipping.checked)
+    //     this.props.subtractShipping();
+    //     }    
 
     handleShipping = (e) => {
         if (e.target.checked) {
@@ -49,34 +49,39 @@ class Shipping extends React.Component {
     }
 
     render() {
-        return (
-            <div className="shipping-container">
-                <div className="shipping-section">
-                    <div className="shipping-message">
-                        <h3>Finalize Your Order</h3>
+        let cartItems = this.props.addedItems.length;
+        if (cartItems) {
+            return (
+                <div className="shipping-container">
+                    <div className="shipping-section">
+                        <div className="shipping-message">
+                            <h3>Finalize Your Order</h3>
+                        </div>
+                        <li className="shipping-item">
+                            <label>
+                                <input type="checkbox" ref="shipping" onChange={this.handleShipping} />
+                                <span className="ShippingCost">Shipping (${shippingCost})</span>
+                            </label>
+                        </li>
+                        <li className="shipping-item">
+                            <label>
+                                <input type="checkbox" ref="pickup" onChange={this.handlePickup} />
+                                <span className="ShippingCost">In-store pickup (free!)</span>
+                            </label>
+                        </li>
+                        <li className="shipping-item">
+                            <p className="cart-total">Total: ${this.props.total}</p>
+                        </li>
                     </div>
-                    <li className="shipping-item">
-                        <label>
-                            <input type="checkbox" ref="shipping" onChange={this.handleShipping} />
-                            <span className="ShippingCost">Shipping (${shippingCost})</span>
-                        </label>
-                    </li>
-                    <li className="shipping-item">
-                        <label>
-                            <input type="checkbox" ref="pickup" onChange={this.handlePickup} />
-                            <span className="ShippingCost">In-store pickup (free!)</span>
-                        </label>
-                    </li>
-                    <li className="shipping-item">
-                        <p className="cart-total">Total: ${this.props.total}</p>
-                    </li>
-                </div>
 
-                <div className="checkout">
-                    <a class="button" href="/">Checkout</a>
+                    <div className="checkout">
+                        <a class="button" href="/">Checkout</a>
+                    </div>
                 </div>
-            </div>
-        )
+            );
+        } else {
+            return null;
+        }
     }
 }
 
