@@ -4,6 +4,12 @@ import Item3 from '../images/item3.png';
 import Item4 from '../images/item4.png';
 import Item5 from '../images/item5.png';
 import Item6 from '../images/item6.png';
+import Item7 from '../images/item7.png';
+import Item8 from '../images/item8.png';
+import Item9 from '../images/item9.png';
+import Item10 from '../images/item10.png';
+import Item11 from '../images/item11.png';
+import Item12 from '../images/item12.png';
 import { 
     ADD_TO_CART,
     REMOVE_ITEM, 
@@ -58,6 +64,48 @@ const initState = {
             desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
             price: 70,
             img: Item6
+        },
+        { 
+            id: 7, 
+            title: 'Boardwalk Sandals', 
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            price: 70,
+            img: Item7
+        },
+        {
+            id: 8,
+            title: 'High-Rise Skinny Jeans',
+            desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            price: 90,
+            img: Item8
+        },
+        {
+            id: 9,
+            title: 'Moon Necklace ',
+            desc: 'Posuere morbi leo urna molestie at elementum eu facilisis sed. At auctor urna nunc id cursus metus. Eu consequat ac felis donec et odio pellentesque.',
+            price: 30,
+            img: Item9
+        },
+        {
+            id: 10,
+            title: 'Button-Down Cami',
+            desc: 'Dui sapien eget mi proin sed libero. Pharetra pharetra massa massa ultricies. Nisi scelerisque eu ultrices vitae auctor eu augue. Blandit cursus risus at ultrices.',
+            price: 40,
+            img: Item10
+        },
+        {
+            id: 11,
+            title: 'Striped Sweater',
+            desc: 'Eget nunc lobortis mattis aliquam faucibus purus. Nibh praesent tristique magna sit amet purus gravida quis.',
+            price: 90,
+            img: Item11
+        },
+        {
+            id: 12,
+            title: 'Denim Mini Dress',
+            desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+            price: 140,
+            img: Item12
         }
     ],
     addedItems: [],
