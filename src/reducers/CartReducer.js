@@ -1,4 +1,4 @@
-import ShopContent from '../constants/ShopContent';
+import { ShopContent } from '../constants/ShopContent';
 import { 
     ADD_TO_CART,
     REMOVE_ITEM, 
