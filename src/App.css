@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .button {
   padding: 15px 25px;
   background-color: #ffffff;
@@ -105,7 +109,7 @@ a {
 /* Footer section */
 .footer {
   border-top: 1px solid #000000;
-  margin-top: 200px;
+  margin-top: 100px;
   padding-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -122,32 +126,43 @@ a {
   text-transform: uppercase;
   letter-spacing: .3em;
   font-weight: 600;
-  border-bottom: 2px solid #1a1a1d;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.location-heading span {
+  font-size: 2.1em;
+  padding-right: 35px;
 }
 
 .address {
-  line-height: .8em;
+  line-height: .9em;
 }
 
 .github {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
   font-size: .65em;
-  color: #1a1a1d;
+  letter-spacing: .15em;
+  color: #dddddd;
 }
 
 .github a {
+  color: #dddddd;
   text-decoration: underline;
-}
-
-.github a:hover {
-  text-decoration: none;
 }
 
 
 /* Items for Sale */
 .item-card {
   width: 350px;
+  margin-bottom: 50px;
 }
 
 .item-image img {
@@ -245,8 +260,17 @@ a {
 
 
 /* Message displayed when cart is empty */
-.shopping-message p {
-  text-align: center;
+.empty-cart-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 120px;
+}
+
+  .empty-cart-message p {
   font-family: 'Times New Roman', serif;
   text-transform: lowercase;
   text-decoration: underline;
