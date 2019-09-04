@@ -93,16 +93,18 @@ a:hover {
 
 .menu a:hover {
   border-bottom: 3px solid #ffffff;
+  text-decoration: none;
 }
 
 
 /* Shopping bag FA icon */
-.bag-ico a a:hover {
+.bag-ico a {
   border-bottom: 0px;
 }
 
 .bag-ico a:hover {
   border-bottom: 0px;
+  text-decoration: none;
 }
 
 
@@ -273,7 +275,6 @@ a:hover {
   .empty-cart-message p {
   font-family: 'Times New Roman', serif;
   text-transform: lowercase;
-  text-decoration: underline;
   font-style: italic;
   font-size: 3em;
 }
