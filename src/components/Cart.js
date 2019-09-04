@@ -86,9 +86,7 @@ class Cart extends React.Component {
                     <ul classname="collection">
                         {addedItems}
                     </ul>
-                    <div className="checkout">
-                        <Shipping />
-                    </div>
+                    <Shipping />
                 </div>
             </div>
         )
