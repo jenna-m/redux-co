@@ -70,7 +70,6 @@ class Cart extends React.Component {
                                 onClick={ () => {this.handleRemoveItem(item.id)} }></i></span>
                             </div>
                         </li>
-                        <Shipping />
                     </div>
                 )
             })
@@ -87,6 +86,7 @@ class Cart extends React.Component {
                     <ul classname="collection">
                         {addedItems}
                     </ul>
+                    <Shipping />
                 </div>
             </div>
         )
