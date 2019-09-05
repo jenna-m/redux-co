@@ -31,8 +31,8 @@ class Home extends React.Component {
                 <div className="item-card" key={item.id}>
                     <div className="item-image">
                         <Link to = {{
-                            pathname: '/:category',
-                            search: '?id=:id',
+                            pathname: `/products/${item.category}`,
+                            search: `?id=${item.id}`,
                         }}><img src={item.img} alt={item.title} /></Link>
                     </div>
                     <div className="card-component">
