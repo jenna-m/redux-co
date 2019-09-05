@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import {
+    BrowserRouter,
+    Route,
+    Link
+} from 'react-router-dom';
+import Item from './shopping/Item';
 import { addToCart } from '../actions/CartActions';
 
 const mapStateToProps = (state) => {
@@ -16,7 +21,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class Home extends React.Component {
-
     handleClick = (id) => {
         this.props.addToCart(id);
     }
@@ -26,7 +30,10 @@ class Home extends React.Component {
             return (
                 <div className="item-card" key={item.id}>
                     <div className="item-image">
-                        <img src={item.img} alt={item.title} />
+                        <Link to = {{
+                            pathname: `/${item.category}`,
+                            search: `?id=${item.id}`,
+                        }}><img src={item.img} alt={item.title} /></Link>
                     </div>
                     <div className="card-component">
                         <span className="item-title">{item.title}</span>
@@ -45,7 +52,7 @@ class Home extends React.Component {
                     {itemList}
                 </div>
             </div>
-        )
+        );
     }
 }
 
