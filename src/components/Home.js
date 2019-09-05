@@ -31,8 +31,8 @@ class Home extends React.Component {
                 <div className="item-card" key={item.id}>
                     <div className="item-image">
                         <Link to = {{
-                            pathname: `/${item.category}`,
-                            search: `?id=${item.id}`,
+                            pathname: '/:category',
+                            search: '?id=:id',
                         }}><img src={item.img} alt={item.title} /></Link>
                     </div>
                     <div className="card-component">
@@ -48,9 +48,11 @@ class Home extends React.Component {
         return (
             <div className="new-arrivals-section">
                 <h1>What's new?</h1>
+                <Route path="/" component={Item}>
                 <div className="new-arrivals-items">
                     {itemList}
                 </div>
+                </Route>
             </div>
         );
     }
