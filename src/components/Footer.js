@@ -15,14 +15,17 @@ class Footer extends React.Component {
                         </ul>
                     </div>
                     <div className="location">
-                        <div className="location-heading">
-                            <span><i class="fa fa-compass"></i></span>
-                        </div>
-                        <div className="address">
-                            <p>Pacific Place</p>
-                            <p>600 Pine Street</p>
-                            <p>Seattle, WA 98101</p>
-                        </div>
+                        <ul>
+                            <li className="heading">Visit</li>
+                            <li>
+                                <div className="address">
+                                    <p>Pacific Place</p>
+                                    <p>600 Pine Street</p>
+                                    <p>Seattle, WA 98101</p>
+                                    <p>United States</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div className="shop-links">
                         <ul>
