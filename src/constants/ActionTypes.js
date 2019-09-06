@@ -12,6 +12,7 @@ export const ADD_SHIPPING = 'ADD_SHIPPING';
 
 export const SUBTRACT_SHIPPING = 'SUBTRACT_SHIPPING';
 
+// const for shipping cost
 export const shippingCost = 10;
 
 export const ADD_PICKUP = 'ADD_PICKUP';
