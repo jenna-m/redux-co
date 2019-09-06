@@ -32,7 +32,7 @@ class Shipping extends React.Component {
     componentWillUnmount() {
         if (this.refs.shipping.checked)
         this.props.subtractShipping();
-        }    
+    }    
 
     handleShipping = (e) => {
         if (e.target.checked) {
