@@ -4,7 +4,14 @@ class OrderStatus extends React.Component {
     render() {
         return(
             <div>
-                <p>OrderStatus Component</p>
+                <h1>Where's My Order?</h1>
+                <div class="order-tracker">
+                <p>Enter your order number below</p>
+                    <form>
+                        <input type="text" />
+                        <button href="/">Track</button>
+                    </form>
+                </div>
             </div>
         );
     }
