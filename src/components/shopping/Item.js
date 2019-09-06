@@ -5,13 +5,7 @@ import {
     addToCart, 
     changeSize
 } from '../../actions/CartActions';
-
-const mapStateToProps = (state) => {
-    return {
-        items: state.items,
-        id: state.items.id
-    }
-}
+import { ShopContent } from '../../constants/ShopContent';
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -20,36 +14,40 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 class Item extends React.Component {
+    constructor() {
+        super();
+
+        this.state = {
+            itemID: ShopContent
+        }
+    }
     handleClick = (id) => {
         this.props.addToCart(id)
     }
 
-    render() {
-        let itemList = this.props.items.map(item =>{
-            return (
-                <div className="item-card" key={item.id}>
-                    <div className="item-image">
-                        <Link to = {{
-                            pathname: `/${item.category}`,
-                            search: `?id=${item.id}`,
-                        }}><img src={item.img} alt={item.title} /></Link>
-                    </div>
-                    <div className="card-component">
-                        <span className="item-title">{item.title}</span>
-                        <Link to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link>
-                        <p className="item-price"><b>${item.price}</b></p>
-                        <p className="item-desc">{item.desc}</p>
-                    </div>
-                </div>
-            )
-        })
+    handleSizeChange = (id) => {
+        this.props.changeSize(id)
+    }
 
+    render() {
+        const itemDetails = this.props.items.filter(
+            item => item.id === this.props.params.id)[0];
         return (
             <div className="item">
-                {itemList}
+                <div className="item-view" key={itemDetails.id}>
+                    <div className="item-image">
+                        <img src={itemDetails.img} alt={itemDetails.title} />
+                    </div>
+                    <div className="card-component">
+                        <span className="item-title">{itemDetails.title}</span>
+                        <Link to="/" className="add-item" onClick={ ()=>{this.handleClick(itemDetails.id)} }><i class="fa fa-plus-circle"></i></Link>
+                        <p className="item-price"><b>${itemDetails.price}</b></p>
+                        <p className="item-desc">{itemDetails.desc}</p>
+                    </div>
+                </div>
             </div>
         );
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Item);
+export default connect(mapDispatchToProps)(Item);

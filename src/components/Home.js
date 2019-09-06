@@ -1,10 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {
-    BrowserRouter,
-    Route,
-    Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Item from './shopping/Item';
 import { addToCart } from '../actions/CartActions';
 
@@ -30,10 +26,13 @@ class Home extends React.Component {
             return (
                 <div className="item-card" key={item.id}>
                     <div className="item-image">
-                        <Link to = {{
-                            pathname: `/products/${item.category}`,
+                        <Link to = 
+                            {{ pathname: `/products/${item.category}`,
                             search: `?id=${item.id}`,
-                        }}><img src={item.img} alt={item.title} /></Link>
+                            state: `${item.id}` }}
+                            component={Item}>
+                                <img src={item.img} alt={item.title} />
+                        </Link>
                     </div>
                     <div className="card-component">
                         <span className="item-title">{item.title}</span>
@@ -48,11 +47,9 @@ class Home extends React.Component {
         return (
             <div className="new-arrivals-section">
                 <h1>What's new?</h1>
-                <Route path="/" component={Item}>
                 <div className="new-arrivals-items">
                     {itemList}
                 </div>
-                </Route>
             </div>
         );
     }
