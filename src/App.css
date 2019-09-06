@@ -18,6 +18,15 @@ h1 {
   text-align: center;
 }
 
+p {
+  font-family: 'Futura', sans-serif;
+}
+
+span .times {
+  font-family: 'Times New Roman', sans-serif;
+  font-style: italic;
+}
+
 a {
   color: #000000;
   text-decoration: none;
@@ -53,7 +62,7 @@ a:hover {
   padding: 0;
   width: 100%;
   background-color: #000000;
-  color: #ffffff
+  color: #ffffff;
 }
 
 .nav-container {
@@ -80,6 +89,9 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 600;
 }
 
 .menu a {
@@ -149,7 +161,7 @@ a:hover {
 }
 
 
-/* Items for Sale */
+/* Home page items */
 .item-card {
   width: 350px;
   margin-bottom: 50px;
