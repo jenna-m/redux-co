@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Footer extends React.Component {
     render() {
@@ -30,13 +31,11 @@ class Footer extends React.Component {
                     <div className="shop-links">
                         <ul>
                             <li className="heading">Any Questions?</li>
-                            <li><a href="/">Order Status</a></li>
-                            <li><a href="/">Gift Cards</a></li>
-                            <li><a href="/">Returns & Exchanges</a></li>
-                            <li><a href="/">Contact Us</a></li>
+                            <li><Link exact to="/order-status">Order Status</Link></li>
+                            <li><Link exact to="/gift-cards">Gift Cards</Link></li>
+                            <li><Link exact to="/returns-exchanges">Returns & Exchanges</Link></li>
+                            <li><Link exact to="/contact">Contact Us</Link></li>
                         </ul>
-                        
-                        
                     </div>
                 </div>
 
