@@ -6,7 +6,7 @@ class OrderStatus extends React.Component {
             <div>
                 <h1>Where's My Order?</h1>
                 <div class="order-tracker">
-                <p>Enter your order number below</p>
+                <h2>Enter your order number below to find out.</h2>
                     <form>
                         <input type="text" />
                         <button href="/">Track</button>
