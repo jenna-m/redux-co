@@ -6,7 +6,8 @@ class Contact extends React.Component {
             <div>
                 <h1>Contact Us</h1>
                 <div class="contact">
-                <p>Do you have questions, comments, or concerns? Contact us with the form below.</p>
+                <h2>Do you have questions, comments, or concerns?</h2>
+                <h3>Contact us with the form below.</h3>
                     <form>
                         <input type="text" />
                         <button href="/">Submit</button>
