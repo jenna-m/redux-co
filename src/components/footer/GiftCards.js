@@ -5,7 +5,11 @@ class GiftCards extends React.Component {
         return(
             <div>
                 <h1>Gift Cards</h1>
-                <p>Who doesn't love a gift card? Select your amount below to add to your cart.</p>
+                <h2>Enter a gift card amount below to add to your cart.</h2>
+                <form>
+                    <input type="text" />
+                    <button href="/">Purchase</button>
+                </form>
             </div>
         );
     }
