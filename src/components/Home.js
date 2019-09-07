@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import {
+    Link,
+    withRouter
+} from 'react-router-dom';
 import Item from './shopping/Item';
 import { addToCart } from '../actions/CartActions';
 
@@ -24,28 +27,34 @@ class Home extends React.Component {
     render() {
         let itemList = this.props.items.map(item =>{
             return (
-                <div className="item-card" key={item.id}>
-                    <div className="item-image">
+                <div className="home-item-card" key={item.id}>
+                    <div className="home-item-image">
                         <Link to = 
                             {{ pathname: `/products/${item.category}`,
                             search: `?id=${item.id}`,
-                            state: `${item.id}` }}
-                            component={Item}>
+                            state: {
+                                id: `${item.id}`,
+                                img: `${item.img}`,
+                                title: `${item.title}`, 
+                                desc: `${item.desc}`,
+                                price: `${item.price}`
+                            } }}
+                            component={ Item }>
                                 <img src={item.img} alt={item.title} />
                         </Link>
                     </div>
-                    <div className="card-component">
-                        <span className="item-title">{item.title}</span>
-                        <Link to="/" className="add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link>
-                        <p className="item-price"><b>${item.price}</b></p>
-                        <p className="item-desc">{item.desc}</p>
+                    <div className="home-item-info">
+                        <span className="home-item-title">{item.title}</span>
+                        <Link to="/" className="home-add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link>
+                        <p className="home-item-price"><b>${item.price}</b></p>
+                        <p className="home-item-desc">{item.desc}</p>
                     </div>
                 </div>
             )
         })
 
         return (
-            <div className="new-arrivals-section">
+            <div className="home-new-arrivals">
                 <h1>What's new?</h1>
                 <div className="new-arrivals-items">
                     {itemList}
@@ -55,4 +64,4 @@ class Home extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home));
