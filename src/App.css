@@ -11,20 +11,30 @@ li {
 }
 
 h1 {
-  margin-bottom: 75px;
+  margin-bottom: 50px;
   font-size: 2.6em;
   color: #1a1a1d;
   text-transform: lowercase;
   text-align: center;
 }
 
-p {
-  font-family: 'Futura', sans-serif;
+h2 {
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
 }
 
-span .times {
-  font-family: 'Times New Roman', sans-serif;
-  font-style: italic;
+h3 {
+  font-family: 'Futura', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  font-family: 'Futura', sans-serif;
 }
 
 a {
@@ -36,6 +46,25 @@ a:hover {
   text-decoration: none;
 }
 
+
+/* Form buttons */
+button {
+  padding: 10px 20px;
+  background-color: #1a1a1d;
+  color: #ffffff;
+  font-family: 'Futura', sans-serif;
+  letter-spacing: .4em;
+  font-size: .6em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+/* Cart buttons */
 .button {
   padding: 15px 25px;
   background-color: #ffffff;
@@ -161,41 +190,43 @@ a:hover {
 }
 
 
-/* Home page items */
-.item-card {
-  width: 350px;
+/* Home page item view */
+.home-item-card {
+  width: 275px;
   margin-bottom: 50px;
 }
 
-.item-image img {
-  width: 350px;
+.home-item-image img {
+  width: 250px;
 }
 
-.item-title {
+.home-item-title {
   text-transform: uppercase;
+  font-size: .7em;
   font-weight: 550;
   letter-spacing: .1em;
 }
 
-.add-item {
+.home-add-item {
   margin-left: 20px;
   color: #1a1a1d;
 }
 
-.item-price {
+.home-item-price {
   line-height: .1em;
   font-size: .8em;
 }
 
-.item-desc {
+.home-item-desc {
   font-family: 'Times New Roman', sans-serif;
   font-style: italic;
-  font-size: 1em;
+  font-size: .9em;
+  width: 250px;
 }
 
 
 /* New Arrivals Section */
-.new-arrivals-section {
+.home-new-arrivals {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -208,6 +239,77 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
+}
+
+
+/* Individual item view */
+.item-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.item-details-img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.item-details-img img {
+  width: 60%;
+}
+
+.item-details-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50%;
+  width: 40%;
+  padding-right: 100px;
+}
+
+.item-details-title {
+  font-family: 'Futura', sans-serif;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: .2em;
+  font-weight: 600;
+}
+
+.item-details-price {
+  font-family: 'Futura', sans-serif;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: .1em;
+  font-weight: 600;
+}
+
+.item-details-desc {
+  color: #1a1a1d;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1em;
+  line-height: 1.3em;
+  letter-spacing: .1em;
+  font-weight: 400;
+  padding-bottom: 30px;
+  border-bottom: 8px solid #1a1a1d;
+}
+
+.item-details-add-to-cart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  width: 40%;
 }
 
 
@@ -224,10 +326,11 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   width: 575px;
+  padding-bottom: 50px;
 }
 
 .cart-item-image img {
-  width: 225px;
+  width: 215px;
 }
 
 .cart-item-info {
@@ -237,19 +340,27 @@ a:hover {
 }
 
 .cart-title {
-  font-size: 1.4em;
+  font-family: 'Futura', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
   text-transform: uppercase;
-  border-bottom: 2px solid #000000;
+  letter-spacing: .18em;
 }
 
 .cart-item-desc {
   font-family: 'Times New Roman', sans-serif;
   font-style: italic;
   font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.4em;
+  letter-spacing: .05em;
 }
 
 .cart-item-price, 
 .cart-item-qty {
+  font-family: 'Futura', sans-serif;
+  font-size: .8em;
+  letter-spacing: .07em;
   font-size: 1.1em;
 }
 
