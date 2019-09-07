@@ -6,8 +6,8 @@ class ReturnsExchanges extends React.Component {
             <div>
                 <h1>Returns & Exchanges</h1>
                 <div class="returns-exchanges">
-                <p>Not totally satisfied with your order? We're sorry!</p>
-                <p>Enter your order number below, and we'll sort it out.</p>
+                <h2>Not totally satisfied with your order? We're sorry!</h2>
+                <h3>Enter your order number below, and we'll sort it out.</h3>
                     <form>
                         <input type="text" />
                         <button href="/">Submit</button>
