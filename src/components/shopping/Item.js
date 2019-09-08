@@ -1,10 +1,22 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { 
-    addToCart, 
-    changeSize
-} from '../../actions/CartActions';
+import {
+    Link,
+    withRouter
+} from 'react-router-dom';
+import { addToCart } from '../../actions/CartActions';
+
+const mapStateToProps = (state) => {
+    return {
+        items: state.items
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addToCart: (id) => { dispatch(addToCart(id)) }
+    };
+}
 
 class Item extends React.Component {
     constructor(props) {
@@ -15,10 +27,14 @@ class Item extends React.Component {
         }
     }
 
+    handleAddToCart = (id) => {
+        this.props.addToCart(id);
+    }
+
     render() {
         let item = this.state.item;
         return (
-            <div className="item-details">
+            <div className="item-details" key={item.id}>
                 <div className="item-details-img">
                     <img src={item.img} alt={item.title} />
                 </div>
@@ -27,7 +43,9 @@ class Item extends React.Component {
                     <p className="item-details-price"><b>${item.price}</b></p>
                     <p className="item-details-desc">{item.desc}</p>
                     <div className="item-details-add-to-cart">
-                        <button>Add to Bag</button>
+                        <Link to="/cart" onClick={()=>{this.handleAddToCart(item.id)}}>
+                            <button>Add to Bag</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -35,4 +53,4 @@ class Item extends React.Component {
     }
 }
 
-export default withRouter(Item);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Item));
