@@ -4,8 +4,8 @@ import {
     Link,
     withRouter
 } from 'react-router-dom';
-import Item from './shopping/Item';
 import { addToCart } from '../actions/CartActions';
+import Item from './shopping/Item';
 
 const mapStateToProps = (state) => {
     return {
@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class Home extends React.Component {
-    handleClick = (id) => {
+    handleAddToCart = (id) => {
         this.props.addToCart(id);
     }
 
@@ -45,7 +45,7 @@ class Home extends React.Component {
                     </div>
                     <div className="home-item-info">
                         <span className="home-item-title">{item.title}</span>
-                        <Link to="/" className="home-add-item" onClick={ ()=>{this.handleClick(item.id)} }><i class="fa fa-plus-circle"></i></Link>
+                        <Link to="/" className="home-add-item" onClick={ ()=>{this.handleAddToCart(item.id)} }><i class="fa fa-plus-circle"></i></Link>
                         <p className="home-item-price"><b>${item.price}</b></p>
                         <p className="home-item-desc">{item.desc}</p>
                     </div>
