@@ -50,17 +50,21 @@ a:hover {
 /* Form buttons */
 button {
   padding: 10px 20px;
-  background-color: #1a1a1d;
-  color: #ffffff;
+  background-color: #ffffff;
+  border: 2px solid #1a1a1d;
+  color: #1a1a1d;
   font-family: 'Futura', sans-serif;
   letter-spacing: .4em;
   font-size: .6em;
   text-transform: uppercase;
   text-decoration: none;
+  transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
 }
 
 button:hover {
   cursor: pointer;
+  background-color: #1a1a1d;
+  color: #ffffff;
 }
 
 
@@ -440,4 +444,39 @@ button:hover {
   width: 200px;
   padding-top: 30px;
   padding-bottom: 100px;
+}
+
+
+/* Forms */
+.form-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
+  width: 100%;
+}
+
+.form-content option {
+  height: 85%;
+  border: 2px solid #1a1a1d;
+  font-family: 'Times New Roman', serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  color: #1a1a1d; 
+}
+
+.form-content input {
+  height: 85%;
+  border: 2px solid #1a1a1d;
+  font-family: 'Times New Roman', serif;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  color: #1a1a1d;
+}
+
+.form-content button {
+  margin-left: 30px;
 }
