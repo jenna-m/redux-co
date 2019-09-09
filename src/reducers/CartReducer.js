@@ -41,7 +41,7 @@ const cartReducer = (state = initState, action) => {
             }
         }
     }
-    
+
     //If item is removed from cart, remove item and recalculate total
     if (action.type === REMOVE_ITEM) {
         let itemToRemove = state.addedItems.find(item => action.id === item.id);
