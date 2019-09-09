@@ -13,17 +13,7 @@ const mapStateToProps = (state) => {
     };
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addToCart: (id) => { dispatch(addToCart(id)) }
-    };
-}
-
 class Home extends React.Component {
-    handleAddToCart = (id) => {
-        this.props.addToCart(id);
-    }
-
     render() {
         let itemList = this.props.items.map(item =>{
             return (
@@ -44,13 +34,8 @@ class Home extends React.Component {
                         </Link>
                     </div>
                     <div className="home-item-info">
-                        <span className="home-item-title">{item.title}</span>
-                        <Link to="/" className="home-add-item" onClick={() => 
-                            { this.handleAddToCart(item.id) } }>
-                            <i class="fa fa-plus-circle"></i>
-                        </Link>
-                        <p className="home-item-price"><b>${item.price}</b></p>
-                        <p className="home-item-desc">{item.desc}</p>
+                        <p className="home-item-title">{item.title}</p>
+                        <p className="home-item-price">${item.price}</p>
                     </div>
                 </div>
             )
@@ -67,4 +52,4 @@ class Home extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Home));
+export default connect(mapStateToProps)(withRouter(Home));
