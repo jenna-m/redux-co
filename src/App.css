@@ -211,21 +211,9 @@ button:hover {
   letter-spacing: .1em;
 }
 
-.home-add-item {
-  margin-left: 20px;
-  color: #1a1a1d;
-}
-
 .home-item-price {
   line-height: .1em;
   font-size: .8em;
-}
-
-.home-item-desc {
-  font-family: 'Times New Roman', sans-serif;
-  font-style: italic;
-  font-size: .9em;
-  width: 250px;
 }
 
 
