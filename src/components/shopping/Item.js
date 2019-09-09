@@ -43,8 +43,8 @@ class Item extends React.Component {
                     <p className="item-details-price"><b>${item.price}</b></p>
                     <p className="item-details-desc">{item.desc}</p>
                     <div className="item-details-add-to-cart">
-                        <Link to="/cart" onClick={()=>{this.handleAddToCart(item.id)}}>
-                            <button>Add to Bag</button>
+                        <Link to="/cart" onClick={ () => { this.handleAddToCart(item.id) } }>
+                            <button>Add item #{item.id} to Bag</button>
                         </Link>
                     </div>
                 </div>
