@@ -12,23 +12,24 @@ const mapStateToProps = (state) => {
     };
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        addToCart: (id) => { dispatch(addToCart(id)) }
-    };
-}
-
 class Item extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            item: this.props.location.state
+        // Extract currently-viewed item ID from current URL
+        let currentItemID = new URLSearchParams(window.location.search).get('id');
+        if (currentItemID) {
+            currentItemID = parseInt(currentItemID, 10);
         }
+        
+        // Set state based on currentItemID
+        this.state = {
+            item: props.items.find(item => item.id === currentItemID)
+        };
     }
-
+    
     handleAddToCart = (id) => {
-        this.props.addToCart(id);
+        this.props.dispatch(addToCart(id));
     }
 
     render() {
@@ -43,8 +44,13 @@ class Item extends React.Component {
                     <p className="item-details-price"><b>${item.price}</b></p>
                     <p className="item-details-desc">{item.desc}</p>
                     <div className="item-details-add-to-cart">
-                        <Link to="/cart" onClick={ () => { this.handleAddToCart(item.id) } }>
-                            <button>Add item #{item.id} to Bag</button>
+                        <Link 
+                            to="/cart"
+                            onClick={ () => { 
+                                this.handleAddToCart(item.id);
+                            }}
+                        >
+                            <button>Add to Bag</button>
                         </Link>
                     </div>
                 </div>
@@ -53,4 +59,4 @@ class Item extends React.Component {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Item));
+export default connect(mapStateToProps)(withRouter(Item));
