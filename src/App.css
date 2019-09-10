@@ -51,7 +51,7 @@ a:hover {
 button {
   padding: 10px 20px;
   background-color: #ffffff;
-  border: 2px solid #1a1a1d;
+  border: 1px solid #1a1a1d;
   color: #1a1a1d;
   font-family: 'Futura', sans-serif;
   letter-spacing: .4em;
@@ -72,7 +72,7 @@ button:hover {
 .button {
   padding: 15px 25px;
   background-color: #ffffff;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   color: #000000;
   font-family: 'Futura', sans-serif;
   letter-spacing: .4em;
@@ -384,54 +384,55 @@ button:hover {
 
 
 /* Shipping section */
-.shipping-container {
+.checkout-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  width: 70%;
 }
 
 .shipping-section {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-.shipping-message {
-  margin: 0 auto;
-  display: inline-block;
+  align-items: center;
 }
 
 .shipping-message h3 {
-  font-family: 'Times New Roman', sans-serif;
-  font-style: italic;
-  font-size: 1.6em;
-  font-weight: 200;
+  font-size: .9em;
+  font-weight: 600;
+  letter-spacing: .15em;
   text-transform: lowercase;
 }
 
-.shipping-item {
-  margin: 0 auto;
-  display: inline-block;
+.shipping-options {
+  font-size: .7em;
+  font-weight: 600;
+  letter-spacing: .1em;
+  line-height: 2em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
-.shipping-cost {
-  font-size: .5em;
-}
-
-.cart-total {
-  font-size: 1.2em;
+input[type="radio"] {
+  margin-right: 20px;
 }
 
 
 /* Checkout button */
 .checkout {
-  display: inline-block;
-  margin: 0 auto;
-  width: 200px;
-  padding-top: 30px;
-  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: .15em;
 }
 
 
@@ -457,11 +458,11 @@ button:hover {
 
 .form-content input {
   height: 85%;
-  border: 2px solid #1a1a1d;
-  font-family: 'Times New Roman', serif;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: 400;
+  width: 200px;
+  border: 1px solid #1a1a1d;
+  font-family: 'Futura', sans-serif;
+  font-size: .6em;
+  letter-spacing: .15em;
   color: #1a1a1d;
 }
 
@@ -471,13 +472,22 @@ button:hover {
 
 
 /* Giftcard section */
+.giftcard-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
 .giftcard-options {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 30px;
+  justify-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-bottom: 40px;
 }
 
 .giftcard-purchase {
