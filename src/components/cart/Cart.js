@@ -53,7 +53,7 @@ class Cart extends React.Component {
                             <div className="cart-item-info">
                                 <span className="cart-title">{item.title}</span>
                                 <p class="cart-item-desc">{item.desc}</p>
-                                <p class="cart-item-price">${item.price}</p>
+                                <p class="cart-item-price">${item.price} ea.</p>
                                 <p class="cart-item-qty">Qty: {item.quantity}</p>
 
                                 <Link to="/cart">
