@@ -10,7 +10,8 @@ import {
 const mapStateToProps = (state) => {
     return {
         addedItems: state.addedItems,
-        total: state.total
+        subTotal: state.subTotal,
+        cartTotal: state.cartTotal
     }
 }
 
@@ -29,11 +30,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class Shipping extends React.Component {
-    componentWillUnmount() {
-        if (this.refs.shipping.checked)
-        this.props.subtractShipping();
-    }    
-
     handleShipping = (e) => {
         if (e.target.checked) {
             this.props.addShipping();
@@ -45,6 +41,10 @@ class Shipping extends React.Component {
     handlePickup = (e) => {
         if (e.target.checked) {
             this.props.addPickup();
+        }
+        if (this.refs.shipping.checked) {
+            this.props.subtractShipping();
+
         }
     }
 
@@ -65,8 +65,9 @@ class Shipping extends React.Component {
                                     name="shipping"
                                     id="standard-shipping"
                                     value="standard-shipping"
-                                    onChange={this.handleShipping} />
-                                <label for="standard-shipping">Home Delivery (${shippingCost})</label>
+                                    checked
+                                    onClick={this.handleShipping} />
+                                <label for="standard-shipping">Standard Shipping (${shippingCost})</label>
                             </div>
                             <div className="shipping-item">
                                 <input
@@ -75,7 +76,7 @@ class Shipping extends React.Component {
                                     name="shipping"
                                     id="store-pickup"
                                     value="store-pickup"
-                                    onChange={this.handlePickup} />
+                                    onClick={this.handlePickup} />
                                 <label for="store-pickup">In-store pickup (free)</label>
                             </div>
                         </div>
@@ -83,7 +84,8 @@ class Shipping extends React.Component {
 
                     <div className="checkout">
                         <div className="cart-total">
-                            <p>Total: ${this.props.total}</p>
+                            <p>Order Subtotal: ${this.props.subTotal}</p>
+                            <p>Total: ${this.props.cartTotal}</p>
                         </div>
                         <div className="checkout-button">
                             <a class="button" href="/">Checkout</a>
