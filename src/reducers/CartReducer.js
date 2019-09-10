@@ -93,7 +93,7 @@ const cartReducer = (state = initState, action) => {
 
     // Logic to add and subtract shipping costs
     if (action.type === ADD_SHIPPING) {
-        return{
+        return {
             ...state,
             total: state.total + shippingCost
         }
@@ -108,7 +108,7 @@ const cartReducer = (state = initState, action) => {
 
     // Logic for in-store pickup
     if (action.type === ADD_PICKUP) {
-        return{
+        return {
             ...state,
             total: state.total
         }
