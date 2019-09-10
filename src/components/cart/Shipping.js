@@ -52,30 +52,42 @@ class Shipping extends React.Component {
         let cartItems = this.props.addedItems.length;
         if (cartItems) {
             return (
-                <div className="shipping-container">
+                <div className="checkout-container">
                     <div className="shipping-section">
                         <div className="shipping-message">
-                            <h3>Finalize Your Order</h3>
+                            <h3>Delivery</h3>
                         </div>
-                        <li className="shipping-item">
-                            <label>
-                                <input type="checkbox" ref="shipping" onChange={this.handleShipping} />
-                                <span className="ShippingCost">Shipping (${shippingCost})</span>
-                            </label>
-                        </li>
-                        <li className="shipping-item">
-                            <label>
-                                <input type="checkbox" ref="pickup" onChange={this.handlePickup} />
-                                <span className="ShippingCost">In-store pickup (free!)</span>
-                            </label>
-                        </li>
-                        <li className="shipping-item">
-                            <p className="cart-total">Total: ${this.props.total}</p>
-                        </li>
+                        <div className="shipping-options">
+                            <div className="shipping-item">
+                                <input
+                                    type="radio"
+                                    ref="shipping"
+                                    name="shipping"
+                                    id="standard-shipping"
+                                    value="standard-shipping"
+                                    onChange={this.handleShipping} />
+                                <label for="standard-shipping">Home Delivery (${shippingCost})</label>
+                            </div>
+                            <div className="shipping-item">
+                                <input
+                                    type="radio"
+                                    ref="pickup"
+                                    name="shipping"
+                                    id="store-pickup"
+                                    value="store-pickup"
+                                    onChange={this.handlePickup} />
+                                <label for="store-pickup">In-store pickup (free)</label>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="checkout">
-                        <a class="button" href="/">Checkout</a>
+                        <div className="cart-total">
+                            <p>Total: ${this.props.total}</p>
+                        </div>
+                        <div className="checkout-button">
+                            <a class="button" href="/">Checkout</a>
+                        </div>
                     </div>
                 </div>
             );
