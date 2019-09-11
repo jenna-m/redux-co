@@ -84,7 +84,7 @@ class Shipping extends React.Component {
 
                     <div className="checkout">
                         <div className="cart-total">
-                            <p>Order Subtotal: ${this.props.subTotal}</p>
+                            <p>Subtotal: ${this.props.subTotal}</p>
                             <p>Total: ${this.props.cartTotal}</p>
                         </div>
                         <div className="checkout-button">
