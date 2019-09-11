@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import cartReducer from './reducers/CartReducer';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import cartReducer from './reducers/CartReducer';
 import App from './App';
 
 const store = createStore(cartReducer);
