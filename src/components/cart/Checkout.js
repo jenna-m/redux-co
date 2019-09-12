@@ -1,45 +1,50 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { shippingCost } from '../../constants/ActionTypes';
+import {
+    ADD_SHIPPING,
+    SUBTRACT_SHIPPING,
+    shippingCost,
+    ADD_PICKUP
+} from '../../constants/ActionTypes';
 
 const mapStateToProps = (state) => {
     return {
-        addedItems: state.addedItems
+        addedItems: state.addedItems,
+        subTotal: state.subTotal,
+        cartTotal: state.cartTotal
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addShipping: () => {
+            dispatch({type: ADD_SHIPPING})
+        },
+        subtractShipping: () => {
+            dispatch({type: SUBTRACT_SHIPPING})
+        },
+        addPickup: () => {
+            dispatch({type: ADD_PICKUP})
+        }
     }
 }
 
 class Checkout extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            subTotal: 0,
-            cartTotal: 0
-        }
-    }
-    
     handleShipping = (e) => {
         if (e.target.checked) {
-            this.setState({
-                cartTotal: this.props.subTotal + shippingCost
-            })
+            this.props.addShipping();
         } else {
-            this.setState({
-                cartTotal: this.props.subTotal - shippingCost
-            })
+            this.props.subtractShipping();
         }
     }
 
     handlePickup = (e) => {
         if (e.target.checked) {
-            this.setState({
-                cartTotal: this.props.subTotal
-            })
+            this.props.addPickup();
         }
         if (this.refs.shipping.checked) {
-            this.setState({
-                cartTotal: this.props.subTotal - shippingCost
-            })
+            this.props.subtractShipping();
+
         }
     }
 
@@ -94,4 +99,4 @@ class Checkout extends React.Component {
     }
 }
 
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
