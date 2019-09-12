@@ -40,7 +40,7 @@ class Footer extends React.Component {
                 </div>
 
                 <div className="github">
-                    <p>Built with <span className="love-ico"><i class="fa fa-heart"></i></span> by <a href="https://github.com/thesemdrnsocks">thesemdrnsocks</a>. Hosted on GitHub.</p>
+                    <p>Built with <span className="love-ico"><i class="fa fa-heart"></i></span> by <a href="https://github.com/j-michaels">j-michaels</a>. Hosted on GitHub.</p>
                 </div>
             </div>
         );
