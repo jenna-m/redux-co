@@ -7,7 +7,7 @@ import {
     removeItem 
 } from '../../actions/CartActions';
 import Empty from './Empty';
-import Shipping from './Shipping';
+import Checkout from './Checkout';
 
 const mapStateToProps = (state) => {
     return {
@@ -86,7 +86,7 @@ class Cart extends React.Component {
                     <ul classname="collection">
                         {addedItems}
                     </ul>
-                    <Shipping />
+                    <Checkout />
                 </div>
             </div>
         )
