@@ -32,7 +32,6 @@ class Footer extends React.Component {
                         <ul>
                             <li className="heading">Any Questions?</li>
                             <li><Link exact to="/order-status">Order Status</Link></li>
-                            <li><Link exact to="/gift-cards">Gift Cards</Link></li>
                             <li><Link exact to="/returns-exchanges">Returns & Exchanges</Link></li>
                             <li><Link exact to="/contact">Contact Us</Link></li>
                         </ul>
