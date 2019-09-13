@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { ShopContent } from '../constants/ShopContent';
 import { 
     ADD_TO_CART,
