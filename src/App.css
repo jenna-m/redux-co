@@ -59,6 +59,7 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
+  outline: none;
 }
 
 button:hover {
@@ -80,6 +81,7 @@ button:hover {
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
+  outline: none;
 }
 
 .button:hover {
@@ -493,6 +495,12 @@ input[type="radio"] {
   justify-content: space-between;
   width: 50%;
   margin-bottom: 40px;
+}
+
+.giftcard-options button:focus {
+  background-color: #1a1a1d;
+  color: #ffffff;
+  outline: none;
 }
 
 .giftcard-purchase {
