@@ -5,7 +5,7 @@ import Item from '../components/shopping/Item';
 import Cart from '../components/cart/Cart';
 import OrderStatus from '../components/footer/OrderStatus';
 import ReturnsExchanges from '../components/footer/Returns-Exchanges';
-import Contact from '../components/footer/Contact';
+import Contact from '../components/footer/contact/contact';
 
 export const Routes = <div>
             <Route exact path="/" component={ Home } />
