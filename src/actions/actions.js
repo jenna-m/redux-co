@@ -3,7 +3,7 @@ import {
     REMOVE_ITEM, 
     ADD_QUANTITY, 
     MINUS_QUANTITY,
-    CHANGE_SIZE
+    CHANGE_SIZE,
 } from '../constants/ActionTypes';
 
 export const addToCart = (id) => {
@@ -23,5 +23,5 @@ export const removeItem = (id) => {
 };
 
 export const changeSize = (id) => {
-    return { type: CHANGE_SIZE, id}
+    return { type: CHANGE_SIZE, id }
 };
