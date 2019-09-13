@@ -61,23 +61,23 @@ class Checkout extends React.Component {
                             <div className="shipping-item">
                                 <input
                                     type="radio"
-                                    ref="shipping"
-                                    name="shipping"
-                                    id="standard-shipping"
-                                    value="standard-shipping"
-                                    defaultChecked
-                                    onClick={this.handleShipping} />
-                                <label for="standard-shipping">Standard Shipping (${shippingCost})</label>
-                            </div>
-                            <div className="shipping-item">
-                                <input
-                                    type="radio"
                                     ref="pickup"
                                     name="shipping"
                                     id="store-pickup"
                                     value="store-pickup"
+                                    defaultChecked
                                     onClick={this.handlePickup} />
                                 <label for="store-pickup">In-store pickup (free)</label>
+                            </div>
+                            <div className="shipping-item">
+                                <input
+                                    type="radio"
+                                    ref="shipping"
+                                    name="shipping"
+                                    id="standard-shipping"
+                                    value="standard-shipping"
+                                    onClick={this.handleShipping} />
+                                <label for="standard-shipping">Standard Shipping (${shippingCost})</label>
                             </div>
                         </div>
                     </div>
