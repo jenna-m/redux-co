@@ -477,34 +477,70 @@ input[type="radio"] {
   margin-left: 30px;
 }
 
-
-/* Giftcard section */
-.giftcard-section {
+/* Contact Form */
+.contact-form-content {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   margin-top: 60px;
+  width: 100%;
 }
 
-.giftcard-options {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-items: center;
-  justify-content: space-between;
-  width: 50%;
-  margin-bottom: 40px;
-}
-
-.giftcard-options button:focus {
-  background-color: #1a1a1d;
-  color: #ffffff;
+.contact-form-content input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #1a1a1d;
+  font-family: 'Futura', sans-serif;
+  font-size: .8em;
+  letter-spacing: .1em;
+  color: #1a1a1d;
   outline: none;
 }
 
-.giftcard-purchase {
+.contact-form-content textarea {
+  height: 120px;
+  width: 100%;
+  border: 1px solid #1a1a1d;
+  font-family: 'Futura', sans-serif;
+  font-size: .8em;
+  letter-spacing: .1em;
+  color: #1a1a1d;
+  outline: none;
+}
+
+Form {
   display: flex;
-  justify-content: center;
-  width: 100%
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-items: space-between;
+  width: 40%;
+}
+
+Form label {
+  padding-top: 35px;
+  font-family: 'Futura', sans-serif;
+  font-size: .8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .15em;  
+}
+
+/* Contact Form error message */
+Form span {
+  padding-top: 10px;
+  font-family: 'Times New Roman', serif;
+  font-size: .8em;
+  font-style: italic;
+  color: #1a1a1d;
+  text-transform: lowercase;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+Form button {
+  margin-top: 35px;
+  width: 100%;
 }
