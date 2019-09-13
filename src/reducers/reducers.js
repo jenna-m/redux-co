@@ -9,7 +9,6 @@ import {
     SUBTRACT_SHIPPING,
     shippingCost,
     ADD_PICKUP,
-    SET_GC_VAL
 } from '../constants/ActionTypes';
 
 const initState = {
@@ -17,7 +16,6 @@ const initState = {
     addedItems: [],
     subTotal: 0,
     cartTotal: 0,
-    giftCardVal: 0
 }
 
 const cartReducer = (state = initState, action) => {
