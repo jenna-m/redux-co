@@ -5,7 +5,7 @@ import {
     addQuantity,
     minusQuantity, 
     removeItem 
-} from '../../actions/CartActions';
+} from '../../actions/actions';
 import Empty from './Empty';
 import Checkout from './Checkout';
 

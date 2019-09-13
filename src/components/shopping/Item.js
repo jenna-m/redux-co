@@ -4,7 +4,7 @@ import {
     Link,
     withRouter
 } from 'react-router-dom';
-import { addToCart } from '../../actions/CartActions';
+import { addToCart } from '../../actions/actions';
 
 const mapStateToProps = (state) => {
     return {
