@@ -1,3 +1,4 @@
+import { combineReducers } from 'redux';
 import { ShopContent } from '../constants/ShopContent';
 import { 
     ADD_TO_CART,
@@ -7,14 +8,16 @@ import {
     ADD_SHIPPING,
     SUBTRACT_SHIPPING,
     shippingCost,
-    ADD_PICKUP
+    ADD_PICKUP,
+    SET_GC_VAL
 } from '../constants/ActionTypes';
 
 const initState = {
     items: ShopContent,
     addedItems: [],
     subTotal: 0,
-    cartTotal: 0
+    cartTotal: 0,
+    giftCardVal: 0
 }
 
 const cartReducer = (state = initState, action) => {
@@ -30,7 +33,7 @@ const cartReducer = (state = initState, action) => {
             return {
                 ...state,
                 subTotal: state.subTotal + addedItem.price,
-                cartTotal: state.subTotal + addedItem.price + shippingCost
+                cartTotal: state.subTotal + addedItem.price
             }
         } else {
             // Add item to cart and calculate subTotal and cartTotal
@@ -40,7 +43,7 @@ const cartReducer = (state = initState, action) => {
                 ...state,
                 addedItems: [...state.addedItems, addedItem],
                 subTotal: newSubTotal,
-                cartTotal: newSubTotal + shippingCost
+                cartTotal: newSubTotal
             }
         }
     }
@@ -56,44 +59,45 @@ const cartReducer = (state = initState, action) => {
             ...state,
             addedItems: newItems,
             subTotal: newSubTotal,
-            cartTotal: newSubTotal + shippingCost
+            cartTotal: newSubTotal
         }
     }
     
     // If item quantity is increased, increase quantity by 1 and recalculate subTotal and cartTotal
     if (action.type === ADD_QUANTITY) {
-        let addedItem = state.items.find(item => item.id === action.id);
-        
-        addedItem.quantity += 1;
-
+        const addedItem = state.items.find(item => item.id === action.id);
+        const updatedItems = state.addedItems.map(item => item.id === action.id ? {...item, quantity: item.quantity + 1 } : item);
         let newSubTotal = state.subTotal + addedItem.price;
+        
         return {
             ...state,
+            addedItems: updatedItems,
             subTotal: newSubTotal,
-            cartTotal: newSubTotal + shippingCost
+            cartTotal: newSubTotal
         }
-
     }
 
     // If item quantity is decreased, subtract quantity and recalculate subTotal and cartTotal
     if (action.type === MINUS_QUANTITY) {
-        let addedItem = state.items.find(item => item.id === action.id);
-        if (addedItem.quantity === 1) {
-            let newItems = state.addedItems.filter(item => item.id !== action.id);
-            let newSubTotal = state.subTotal - addedItem.price;
+        let subtractedItem = state.items.find(item => item.id === action.id);
+        if (subtractedItem.quantity === 1) {
+            const updatedItems = state.addedItems.map(item => item.id === action.id ? {...item, quantity: item.quantity - 1 } : item);
+            let newSubTotal = state.subTotal - subtractedItem.price;
             return {
                 ...state,
-                addedItems: newItems,
+                addedItems: updatedItems,
                 subTotal: newSubTotal,
-                cartTotal: newSubTotal + shippingCost
+                cartTotal: newSubTotal
             }
         } else {
-            addedItem.quantity -= 1;
-            let newSubTotal = state.subTotal - addedItem.price;
+            subtractedItem.quantity -= 1;
+            const updatedItems = state.addedItems.map(item => item.id === action.id ? {...item, quantity: item.quantity - 1 } : item);
+            let newSubTotal = state.subTotal - subtractedItem.price;
             return {
                 ...state,
+                addedItems: updatedItems,
                 subTotal: newSubTotal,
-                cartTotal: newSubTotal + shippingCost
+                cartTotal: newSubTotal
             }
         }
     }
@@ -119,16 +123,16 @@ const cartReducer = (state = initState, action) => {
 
     // Logic for in-store pickup
     if (action.type === ADD_PICKUP) {
+        let shippingCost = 0;
         return {
             ...state,
             subTotal: state.subTotal,
             shipping: 0,
-            cartTotal: state.subTotal
+            cartTotal: state.subTotal + shippingCost
         }
     }
     
     return state;
 }
-
 
 export default cartReducer;
