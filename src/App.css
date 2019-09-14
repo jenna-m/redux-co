@@ -520,7 +520,7 @@ Form {
 }
 
 Form label {
-  padding-top: 35px;
+  padding-top: 25px;
   font-family: 'Futura', sans-serif;
   font-size: .8em;
   font-weight: 600;
@@ -530,7 +530,7 @@ Form label {
 
 /* Contact Form error message */
 Form span {
-  padding-top: 10px;
+  margin-top: 7px;
   font-family: 'Times New Roman', serif;
   font-size: .8em;
   font-style: italic;
