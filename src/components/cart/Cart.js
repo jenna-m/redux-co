@@ -52,7 +52,6 @@ class Cart extends React.Component {
 
                             <div className="cart-item-info">
                                 <span className="cart-title">{item.title}</span>
-                                <p class="cart-item-desc">{item.desc}</p>
                                 <p class="cart-item-price">${item.price} ea.</p>
                                 <p class="cart-item-qty">Qty: {item.quantity}</p>
 
@@ -80,12 +79,10 @@ class Cart extends React.Component {
         )
 
         return (
-            <div className="container">
+            <div className="cart-container">
                 <h1>What's in your bag?</h1>
-                <div className="cart">
-                    <ul classname="collection">
-                        {addedItems}
-                    </ul>
+                <div className="cart-items">
+                    {addedItems}
                     <Checkout />
                 </div>
             </div>
