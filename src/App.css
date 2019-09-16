@@ -124,14 +124,14 @@ button:hover {
   display: flex;
   justify-content: flex-end;
   margin-right: 50px;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+  font-size: .8em;
   font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
 .menu a {
   color: #ffffff;
-  font-size: 1em;
   text-transform: uppercase;
   text-decoration: none;
   border-bottom: 3px solid #000000;
@@ -219,45 +219,45 @@ button:hover {
 }
 
 
-/* Home page item view */
-.home-item-card {
-  width: 275px;
-  margin-bottom: 50px;
-}
-
-.home-item-image img {
-  width: 250px;
-}
-
-.home-item-title {
-  text-transform: uppercase;
-  font-size: .7em;
-  font-weight: 550;
-  letter-spacing: .1em;
-}
-
-.home-item-price {
-  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-size: .9em;
-  line-height: .1em;
-}
-
-
-/* New Arrivals Section */
-.home-new-arrivals {
+/* New Arrivals/Home View */
+.new-arrivals-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  justify-items: space-between;
+  flex-direction: column;
+  align-content: center;
   width: 100%;
 }
 
 .new-arrivals-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+.new-arrivals-item-card {
+  flex-basis: auto;
+  width: 250px;
+  margin-bottom: 50px;
+}
+
+.new-arrivals-item-image img {
   width: 100%;
+}
+
+.new-arrivals-item-title {
+  text-transform: uppercase;
+  font-size: .7em;
+  font-weight: 550;
+  letter-spacing: .1em;
+}
+
+.new-arrivals-item-price {
+  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: .9em;
+  line-height: .1em;
 }
 
 
@@ -298,7 +298,7 @@ button:hover {
 .category-item-price {
   font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  font-size: .9em;
+  font-size: .95em;
   line-height: .1em;
 }
 
@@ -360,7 +360,7 @@ button:hover {
   font-weight: 400;
   color: #1a1a1d;
   line-height: 1.3em;
-  letter-spacing: .1em;
+  letter-spacing: .04em;
   width: 100%;
   padding-bottom: 30px;
   border-bottom: 8px solid #1a1a1d;
@@ -376,28 +376,42 @@ button:hover {
 
 
 /* Items in cart */
-.cart {
+.cart-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  justify-items: space-between;
+  flex-direction: column;
+  align-content: center;
   width: 100%;
+}
+
+.cart-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  width: 50%;
 }
 
 .cart-item-card {
   display: flex;
   flex-wrap: wrap;
-  width: 575px;
-  padding-bottom: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.cart-item-image{
+  width: 30%;
 }
 
 .cart-item-image img {
-  width: 215px;
+  width: 100%;
 }
 
 .cart-item-info {
-  width: 300px;
-  margin-left: 50px;
+  width: 60%;
   font-size: .7em;
 }
 
@@ -407,15 +421,6 @@ button:hover {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .18em;
-}
-
-.cart-item-desc {
-  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 1.4em;
-  letter-spacing: .05em;
 }
 
 .cart-item-price, 
@@ -458,8 +463,8 @@ button:hover {
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: space-evenly;
-  width: 60%;
+  justify-content: space-around;
+  width: 100%;
   border-top: 2px solid #ebebeb;
 }
 
