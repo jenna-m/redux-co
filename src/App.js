@@ -5,8 +5,8 @@ import { PersistGate } from 'redux-persist/lib/integration/react';
 import { persistor, store } from '../src/store/configureStore';
 
 import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 import ScrollToTop from './components/ScrollToTop';
 import { Routes } from './constants/Routes';
 
