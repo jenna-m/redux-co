@@ -16,8 +16,8 @@ class Home extends React.Component {
     render() {
         let itemList = this.props.items.map(item =>{
             return (
-                <div className="home-item-card" key={item.id}>
-                    <div className="home-item-image">
+                <div className="new-arrivals-item-card" key={item.id}>
+                    <div className="new-arrivals-item-image">
                         <Link
                             to = {{
                                 pathname: `/products/${item.category}/${item.subcat}`,
@@ -27,16 +27,16 @@ class Home extends React.Component {
                                 <img src={item.img} alt={item.title} />
                         </Link>
                     </div>
-                    <div className="home-item-info">
-                        <p className="home-item-title">{item.title}</p>
-                        <p className="home-item-price">${item.price}</p>
+                    <div className="new-arrivals-item-info">
+                        <p className="new-arrivals-item-title">{item.title}</p>
+                        <p className="new-arrivals-item-price">${item.price}</p>
                     </div>
                 </div>
             )
         })
 
         return (
-            <div className="home-new-arrivals">
+            <div className="new-arrivals-container">
                 <h1>What's new?</h1>
                 <div className="new-arrivals-items">
                     {itemList}
