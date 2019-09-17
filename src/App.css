@@ -345,6 +345,26 @@ button:hover {
   width: 40%;
 }
 
+.item-details-breadcrumb {
+  padding: 0px;
+  width: 100%;
+}
+
+.item-details-breadcrumb li {
+  display: inline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: .75em;
+  letter-spacing: .09em;
+  color: #1a1a1d;
+}
+
+.item-details-breadcrumb li+li:before {
+  padding: 1.5em;
+  color: #dddddd;
+  content: "|";
+}
+
 .item-details-title {
   font-family: 'Futura', sans-serif;
   margin-bottom: 8px;

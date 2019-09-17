@@ -40,6 +40,10 @@ class Item extends React.Component {
                     <img src={item.img} alt={item.title} />
                 </div>
                 <div className="item-details-info">
+                    <ul className="item-details-breadcrumb">
+                        <li><Link to={`/${item.category}`}>{item.category}</Link></li>
+                        <li><Link to={`/${item.subcat}`}>{item.subcat}</Link></li>
+                    </ul>
                     <p className="item-details-title">{item.title}</p>
                     <p className="item-details-price"><b>${item.price}</b></p>
                     <p className="item-details-desc">{item.desc}</p>
