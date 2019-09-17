@@ -27,10 +27,6 @@ class Home extends React.Component {
                                 <img src={item.img} alt={item.title} />
                         </Link>
                     </div>
-                    <div className="new-arrivals-item-info">
-                        <p className="new-arrivals-item-title">{item.title}</p>
-                        <p className="new-arrivals-item-price">${item.price}</p>
-                    </div>
                 </div>
             )
         })
