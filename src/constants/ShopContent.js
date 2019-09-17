@@ -29,7 +29,7 @@ export const ShopContent = [
         price: 30,
         img: Item2,
         category: 'accessories',
-        subcat: 'glasses',
+        subcat: 'eyewear',
         sale: false
     },
     {

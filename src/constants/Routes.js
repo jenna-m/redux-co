@@ -8,6 +8,7 @@ import Tops from '../components/shopping/clothing/tops';
 import Sweaters from '../components/shopping/clothing/sweaters';
 import Jackets from '../components/shopping/clothing/jackets';
 import Denim from '../components/shopping/clothing/denim';
+import Skirts from '../components/shopping/clothing/skirts';
 import Dresses from '../components/shopping/clothing/dresses';
 
 import Shoes from '../components/shopping/shoes/shoes';
@@ -17,7 +18,7 @@ import Sandals from '../components/shopping/shoes/sandals';
 import Accessories from '../components/shopping/accessories/accessories';
 import Purses from '../components/shopping/accessories/purses';
 import Jewelry from '../components/shopping/accessories/jewelry';
-import Glasses from '../components/shopping/accessories/glasses';
+import Eyewear from '../components/shopping/accessories/eyewear';
 
 import Cart from '../components/cart/Cart';
 import Contact from '../components/footer/contact/contact';
@@ -31,6 +32,7 @@ export const Routes =
                 <Route path="/sweaters" component={ Sweaters } />
                 <Route path="/jackets" component={ Jackets } />
                 <Route path="/denim" component={ Denim } />
+                <Route path="/skirts" component={ Skirts } />
                 <Route path="/dresses" component={ Dresses } />
 
                 <Route path="/shoes" component={ Shoes } />
@@ -40,7 +42,7 @@ export const Routes =
                 <Route path="/accessories" component={ Accessories } />
                 <Route path="/purses" component={ Purses } />
                 <Route path="/jewelry" component={ Jewelry } />
-                <Route path="/glasses" component={ Glasses } />
+                <Route path="/eyewear" component={ Eyewear } />
 
                 <Route path="/products" component={ Item } />
                 <Route path="/cart" component={ Cart } />

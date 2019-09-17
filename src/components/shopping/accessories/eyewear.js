@@ -12,10 +12,10 @@ const mapStateToProps = (state) => {
     };
 }
 
-class Glasses extends React.Component {
+class Eyewear extends React.Component {
     render() {
         let itemList = this.props.items.map(item => {
-            if (item.subcat === 'glasses') {
+            if (item.subcat === 'eyewear') {
                 return (
                     <div className="category-item-card" key={item.id}>
                         <div className="category-item-image">
@@ -41,7 +41,7 @@ class Glasses extends React.Component {
 
         return (
             <div className="category-container">
-                <h1>(Sun)glasses</h1>
+                <h1>Eyewear</h1>
                 <div className="category-items">
                     {itemList}
                 </div>
@@ -50,4 +50,4 @@ class Glasses extends React.Component {
     }
 }
 
-export default connect(mapStateToProps)(withRouter(Glasses));
+export default connect(mapStateToProps)(withRouter(Eyewear));
