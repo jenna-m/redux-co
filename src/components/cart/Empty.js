@@ -5,7 +5,7 @@ class Empty extends React.Component {
         return (
             <div className="empty-cart-message">
                 <p>Nothing</p>
-                <a className="button" href="/">Start shopping!</a>
+                <a className="button" href="/">Start shopping</a>
             </div>
         );
     }
