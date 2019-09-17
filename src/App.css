@@ -146,16 +146,24 @@ button:hover {
 }
 
 /* Sub-menu */
+.submenu-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .submenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
   background-color: #000000;
-  position: absolute;
-  display: inline;
   padding-bottom: 10px;
   font-size: .75em;
   letter-spacing: .1em;
 }
 
-.menu a {
+.submenu a {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -163,7 +171,7 @@ button:hover {
   transition: border-bottom .1s linear .1s;
 }
 
-.menu a:hover {
+.submenu a:hover {
   border-bottom: 2px solid #ffffff;
   text-decoration: none;
 }
@@ -248,7 +256,7 @@ button:hover {
   width: 100%;
 }
 
-.new-arrivals-item-title {
+/* .new-arrivals-item-title {
   text-transform: uppercase;
   font-size: .7em;
   font-weight: 550;
@@ -260,7 +268,7 @@ button:hover {
   font-style: italic;
   font-size: .9em;
   line-height: .1em;
-}
+} */
 
 
 /* Category View */
