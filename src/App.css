@@ -102,13 +102,11 @@ button:hover {
 
 .nav-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .brand-logo {
-  display: flex;
-  justify-items: center;
   padding: 20px 50px;
   color: #ffffff;
   font-weight: 600;
@@ -123,68 +121,73 @@ button:hover {
 
 .menu li {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-right: 50px;
-  font-size: .8em;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  margin-right: 45px;
 }
 
 .menu a {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 3px solid #000000;
-  transition: border-bottom .1s linear .1s;
-}
-
-.menu a:hover {
-  border-bottom: 3px solid #ffffff;
-  text-decoration: none;
 }
 
 /* Sub-menu */
-.submenu-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.submenu {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
+ul.menu {
   background-color: #000000;
-  padding-bottom: 10px;
-  font-size: .75em;
+  font-size: .85em;
+  font-weight: 600;
   letter-spacing: .1em;
-}
-
-.submenu a {
-  color: #ffffff;
   text-transform: uppercase;
-  text-decoration: none;
-  border-bottom: 2px solid #000000;
-  transition: border-bottom .1s linear .1s;
 }
 
-.submenu a:hover {
-  border-bottom: 2px solid #ffffff;
-  text-decoration: none;
+ul.menu li a {
+  display: block; 
+  background-color: #000000;
 }
 
-
-/* Shopping bag FA icon */
-.bag-ico a {
-  border-bottom: 0px;
+ul.menu > li:hover {
+  background-color: #000000;
 }
 
-.bag-ico a:hover {
-  border-bottom: 0px;
-  text-decoration: none;
+ul.menu li a:hover {
+  border-bottom: none;
+}
+
+ul.menu > li {
+  display: inline-block; 
+  position: relative; 
+}
+
+ul.menu > li ul {
+  display: none; 
+  position: absolute; 
+  left: -1px;
+  width: 125px;
+  margin-top: 1px;
+}
+
+ul.menu > li:hover ul {
+  display: block;
+}
+
+ul.menu > li ul li {
+  display: block;
+}
+
+.dropdown {
+  width: 100%;
+  padding-top: 30px;
+  padding-left: 0px;
+  background-color: #000000;
+}
+
+.sublink {
+  background-color: #000000;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  font-size: .85em;
 }
 
 
@@ -255,20 +258,6 @@ button:hover {
 .new-arrivals-item-image img {
   width: 100%;
 }
-
-/* .new-arrivals-item-title {
-  text-transform: uppercase;
-  font-size: .7em;
-  font-weight: 550;
-  letter-spacing: .1em;
-}
-
-.new-arrivals-item-price {
-  font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-size: .9em;
-  line-height: .1em;
-} */
 
 
 /* Category View */
@@ -472,11 +461,8 @@ button:hover {
 .empty-cart-message {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100px;
-  margin-bottom: 120px;
+  margin-bottom: 75px;
 }
 
   .empty-cart-message p {
