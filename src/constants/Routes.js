@@ -13,6 +13,7 @@ import Dresses from '../components/shopping/clothing/dresses';
 
 import Shoes from '../components/shopping/shoes/shoes';
 import Boots from '../components/shopping/shoes/boots';
+import Heels from '../components/shopping/shoes/heels';
 import Sandals from '../components/shopping/shoes/sandals';
 
 import Accessories from '../components/shopping/accessories/accessories';
@@ -37,6 +38,7 @@ export const Routes =
 
                 <Route path="/shoes" component={ Shoes } />
                 <Route path="/boots" component={ Boots } />
+                <Route path="/heels" component={ Heels } />
                 <Route path="/sandals" component={ Sandals } />
 
                 <Route path="/accessories" component={ Accessories } />
