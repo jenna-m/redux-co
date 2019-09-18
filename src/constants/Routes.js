@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from '../components/home/home';
+
 import NewArrivals from '../components/shopping/newArrivals';
-import Item from '../components/shopping/item';
 
 import Clothing from '../components/shopping/clothing/clothing';
 import Tops from '../components/shopping/clothing/tops';
@@ -22,12 +22,16 @@ import Purses from '../components/shopping/accessories/purses';
 import Jewelry from '../components/shopping/accessories/jewelry';
 import Eyewear from '../components/shopping/accessories/eyewear';
 
+import Item from '../components/shopping/item';
 import Cart from '../components/cart/Cart';
+
+import About from '../components/footer/about';
 import Contact from '../components/footer/contact/contact';
 
 export const Routes = 
             <div>
                 <Route exact path="/" component={ Home } />
+                
                 <Route path="/new-arrivals" component={ NewArrivals } />
 
                 <Route path="/clothing" component={ Clothing } />
@@ -50,5 +54,7 @@ export const Routes =
 
                 <Route path="/products" component={ Item } />
                 <Route path="/cart" component={ Cart } />
+
+                <Route path="/about" component={ About } />
                 <Route path="/contact" component={ Contact } />
             </div>

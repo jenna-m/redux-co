@@ -31,6 +31,7 @@ class Footer extends React.Component {
                     <div className="shop-links">
                         <ul>
                             <li className="heading">Any Questions?</li>
+                            <li><Link exact to="/about">About</Link></li>
                             <li><Link exact to="/contact">Contact Us</Link></li>
                         </ul>
                     </div>

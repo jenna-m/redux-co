@@ -281,7 +281,7 @@ ul.menu > li ul li {
 }
 
 .see-more {
-  padding-top: 50px;
+  padding-top: 25px;
   text-align: center;
   font-size: .7em;
   font-weight: 600;
@@ -482,10 +482,10 @@ ul.menu > li ul li {
   font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
   font-size: 1em;
+  letter-spacing: .06em;
+  line-height: 1.6em;
   font-weight: 400;
   color: #1a1a1d;
-  line-height: 1.3rem;
-  letter-spacing: .04rem;
   width: 100%;
   padding-bottom: 30px;
   border-bottom: 8px solid #1a1a1d;
@@ -637,6 +637,23 @@ input[type="radio"] {
   margin-bottom: 25px;
 }
 
+
+/* About */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.about p {
+  width: 70%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1em;
+  letter-spacing: .06em;
+  line-height: 1.6em;
+}
 
 /* Contact Form */
 .contact-form-content {
