@@ -11,8 +11,11 @@ const mapStateToProps = (state) => {
 
 class Home extends React.Component {
     render() {
+        let categories = ['tops', 'sweaters', 'jackets', 'denim', 'dresses', 'skirts', 'boots', 'sandals', 'heels', 'purses', 'jewelry', 'eyewear'];
+        let randomNumber = Math.floor(Math.random() * 12);
+        let randomCategory = categories[randomNumber];
         let itemList = this.props.items.map(item => {
-            if (item.id > 38) {
+            if (item.subcat === randomCategory) {
                 return (
                     <div className="new-arrivals-item-card" key={item.id}>
                         <div className="new-arrivals-item-image">
@@ -40,9 +43,12 @@ class Home extends React.Component {
                     <span>Photo by <a href="https://unsplash.com/@fng137">Felipe Galvan</a></span>
                 </div>
                 <div className="new-arrivals-container">
-                    <h1>How about...</h1>
+                    <h1>How about {randomCategory}?</h1>
                     <div className="new-arrivals-items">
                         {itemList}
+                    </div>
+                    <div className="see-more">
+                        <Link to={`/${randomCategory}`}>See more {randomCategory}</Link>
                     </div>
                 </div>
             </div>
