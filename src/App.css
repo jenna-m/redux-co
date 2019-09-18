@@ -213,7 +213,7 @@ ul.menu > li ul li {
 }
 
 .home-hero-message h1 {
-  margin-bottom: 70px;
+  margin-bottom: 100px;
   text-transform: none;
   text-align: start;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -243,7 +243,7 @@ ul.menu > li ul li {
 /* Hero button */
 .hero-button {
   padding: 15px 25px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   font-family: 'Futura', sans-serif;
   letter-spacing: .2em;
@@ -255,6 +255,46 @@ ul.menu > li ul li {
 
 .hero-button:hover {
   cursor: pointer;
+}
+
+
+/* Random Item View */
+.random-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.random-item-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 40%;
+}
+
+.random-item-message h1 {
+  line-height: 2.5em;
+}
+
+.see-more {
+  padding-top: 50px;
+  text-align: center;
+  font-size: .7em;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.random-item-card {
+  width: 38%;
+}
+
+.random-item-image img {
+  width: 100%;
 }
 
 
@@ -299,7 +339,7 @@ ul.menu > li ul li {
 }
 
 
-/* New Arrivals & Home View */
+/* New Arrivals View */
 .new-arrivals-container {
   display: flex;
   flex-wrap: wrap;
@@ -324,14 +364,6 @@ ul.menu > li ul li {
 
 .new-arrivals-item-image img {
   width: 100%;
-}
-
-.see-more {
- text-align: center;
- font-size: 1em;
- font-weight: 600;
- letter-spacing: .1em;
- text-transform: uppercase;
 }
 
 
