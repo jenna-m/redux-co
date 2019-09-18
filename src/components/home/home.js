@@ -18,7 +18,7 @@ class Home extends React.Component {
                         <h1>now open in Seattle!</h1>
                         <Link className="hero-button" to="/new-arrivals">Shop the New Arrivals</Link>
                     </div>
-                    <span>Photo by <a href="https://unsplash.com/@fng137">Felipe Galvan</a></span>
+                    <span>Photo by <a href="https://unsplash.com/@fng137" target="new">Felipe Galvan</a></span>
                 </div>
                 <RandomItem />
             </div>
