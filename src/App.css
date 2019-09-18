@@ -297,7 +297,7 @@ ul.menu > li ul li {
 }
 
 
-/* New Arrivals/Home View */
+/* New Arrivals & Home View */
 .new-arrivals-container {
   display: flex;
   flex-wrap: wrap;
@@ -322,6 +322,14 @@ ul.menu > li ul li {
 
 .new-arrivals-item-image img {
   width: 100%;
+}
+
+.see-more {
+ text-align: center;
+ font-size: 1em;
+ font-weight: 600;
+ letter-spacing: .1em;
+ text-transform: uppercase;
 }
 
 
