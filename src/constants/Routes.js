@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Home from '../components/Home';
+import Home from '../components/home/home';
 import NewArrivals from '../components/shopping/newArrivals';
-import Item from '../components/shopping/Item';
+import Item from '../components/shopping/item';
 
 import Clothing from '../components/shopping/clothing/clothing';
 import Tops from '../components/shopping/clothing/tops';

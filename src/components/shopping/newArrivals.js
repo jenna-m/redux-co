@@ -4,7 +4,7 @@ import {
     Link,
     withRouter
 } from 'react-router-dom';
-import Item from './Item';
+import Item from './item';
 
 const mapStateToProps = (state) => {
     return {
