@@ -4,6 +4,7 @@ import {
     Link,
     withRouter
 } from 'react-router-dom';
+import { SideBySideMagnifier } from "react-image-magnifiers";
 import { addToCart } from '../../actions/actions';
 
 const mapStateToProps = (state) => {
@@ -37,7 +38,11 @@ class Item extends React.Component {
         return (
             <div className="item-details" key={item.id}>
                 <div className="item-details-img">
-                    <img src={item.img} alt={item.title} />
+                    <SideBySideMagnifier
+                        imageSrc={item.img}
+                        imageAlt={item.title}
+                        alwaysInPlace="true"
+                    />
                 </div>
                 <div className="item-details-info">
                     <ul className="item-details-breadcrumb">
