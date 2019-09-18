@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
-import RandomItems from './randomItems';
+import RandomItem from './randomItem';
 
 const mapStateToProps = (state) => {
     return {
@@ -20,7 +20,7 @@ class Home extends React.Component {
                     </div>
                     <span>Photo by <a href="https://unsplash.com/@fng137">Felipe Galvan</a></span>
                 </div>
-                <RandomItems />
+                <RandomItem />
             </div>
             
         );
