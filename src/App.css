@@ -191,6 +191,71 @@ ul.menu > li ul li {
 }
 
 
+/* Home page Hero */
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-top: 75px;
+  padding-left: 50px;
+  margin-bottom: 80px;
+  height: 620px;
+  background-image: url(./images/hero1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero-message {
+  height: 30%;
+  width: 100%;
+}
+
+.home-hero-message h1 {
+  text-transform: none;
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.6em;
+  font-weight: 600;
+  letter-spacing: .075em;
+  font-style: italic;
+  color: #1a1a1d;
+}
+
+.home-hero span {
+  text-align: end;
+  margin-top: 400px;
+  margin-right: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: .7em;
+  letter-spacing: .1em;
+  font-style: italic;
+  color: #ffffff;
+}
+
+.home-hero span a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Hero button */
+.hero-button {
+  padding: 15px 25px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-family: 'Futura', sans-serif;
+  letter-spacing: .2em;
+  font-size: .75em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+
+.hero-button:hover {
+  cursor: pointer;
+}
+
+
 /* Footer section */
 .footer {
   border-top: 2px solid #000000;
@@ -343,7 +408,7 @@ ul.menu > li ul li {
   display: inline;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  font-size: .75em;
+  font-size: .9em;
   letter-spacing: .09em;
   color: #1a1a1d;
 }
