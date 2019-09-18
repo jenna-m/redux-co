@@ -40,7 +40,11 @@ class RandomItem extends React.Component {
                         <div className="random-item-message">
                             <h1>{randomPhrase} {item.subcat}?</h1>
                             <div className="see-more">
-                                <Link to={`/${item.subcat}`}>Browse all {item.subcat}</Link>
+                                <ul>
+                                    <li><Link to={`/${item.subcat}`}>Browse all {item.subcat}</Link></li>
+                                    <li><Link to={`/${item.category}`}>Browse all {item.category}</Link></li>
+                                    <li><Link to="/all-items">Browse everything else</Link></li>
+                                </ul>
                             </div>
                         </div>
                         <div className="random-item-card" key={item.id}>
