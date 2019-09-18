@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 class NewArrivals extends React.Component {
     render() {
         let itemList = this.props.items.map(item => {
-            if (item.id > 22) {
+            if (item.id > 34) {
                 return (
                     <div className="new-arrivals-item-card" key={item.id}>
                         <div className="new-arrivals-item-image">
