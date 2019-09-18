@@ -10,9 +10,37 @@ const schema = yup.object().shape({
 });
 
 class ContactForm extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            data: null
+        }
+
+        this.callBackendAPI = this.callBackendAPI.bind(this);
+    }
+
+    componentDidMount() {
+        // Call fetch function below when component mounts
+        this.callBackendAPI()
+            .then(res => this.setState({ data: res.express }))
+            .catch(err => console.log(err));
+    }
+
+    // Fetch the GET route from Express server
+    callBackendAPI = async () => {
+        const response = await fetch('/express_backend');
+        const body = await response.json();
+
+        if (response.status !== 200) {
+            throw Error(body.message)
+        } return body;
+    }
+
     render() {
         return (
             <div className="contact-form-content">
+                <p className="App-intro">{this.state.data}</p>
                 <Formik
                     validationSchema={schema}
                     initialValues={{
