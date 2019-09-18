@@ -277,16 +277,24 @@ ul.menu > li ul li {
 }
 
 .random-item-message h1 {
-  line-height: 2.5em;
+  line-height: 2em;
 }
 
 .see-more {
-  padding-top: 25px;
   text-align: center;
-  font-size: .7em;
+  font-size: .8em;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
+}
+
+.see-more ul {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3em;
 }
 
 .random-item-card {
