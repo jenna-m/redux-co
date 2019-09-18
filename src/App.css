@@ -104,10 +104,11 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .brand-logo {
-  padding: 20px 50px;
+  padding: 25px 50px;
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
