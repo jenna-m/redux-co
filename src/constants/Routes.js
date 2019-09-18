@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from '../components/Home';
+import NewArrivals from '../components/shopping/newArrivals';
 import Item from '../components/shopping/Item';
 
 import Clothing from '../components/shopping/clothing/clothing';
@@ -27,6 +28,7 @@ import Contact from '../components/footer/contact/contact';
 export const Routes = 
             <div>
                 <Route exact path="/" component={ Home } />
+                <Route path="/new-arrivals" component={ NewArrivals } />
 
                 <Route path="/clothing" component={ Clothing } />
                 <Route path="/tops" component={ Tops } />
