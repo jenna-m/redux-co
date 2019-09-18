@@ -41,7 +41,6 @@ import Item40 from '../images/Item40.jpg';
 import Item41 from '../images/Item41.jpg';
 import Item42 from '../images/Item42.jpg';
 
-
 export const ShopContent = [
     { 
         id: 1, 
@@ -464,3 +463,6 @@ export const ShopContent = [
         sale: false
     }
 ];
+
+// Update every time item is added to store
+export const numberOfItems = 42;
