@@ -213,8 +213,9 @@ ul.menu > li ul li {
 }
 
 .home-hero-message h1 {
+  margin-bottom: 70px;
   text-transform: none;
-  text-align: left;
+  text-align: start;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 2.6em;
   font-weight: 600;
@@ -242,7 +243,7 @@ ul.menu > li ul li {
 /* Hero button */
 .hero-button {
   padding: 15px 25px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #ffffff;
   font-family: 'Futura', sans-serif;
   letter-spacing: .2em;
