@@ -8,7 +8,6 @@ class Navbar extends React.Component {
                 <div className="nav-container">
                     <NavLink exact to="/" className="brand-logo">redux Co.</NavLink>
                     <ul class="menu">
-                        <li><Link to="/new-arrivals">New Arrivals</Link></li>
                         <li>
                             <li className="menu-category"><Link to="/clothing">Clothing</Link></li>
                             <ul className="dropdown">
