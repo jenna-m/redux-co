@@ -22,7 +22,12 @@ class RandomItem extends React.Component {
 
     render() {
         // Generate random messaging
-        let phrases = ['Looking for', 'How about', 'Need some', 'Searching for']
+        let phrases = [
+            'Looking for',
+            'In search of',
+            'How about',
+            'Need some',
+        ]
         let randomNum = random(3);
         let randomPhrase = phrases[randomNum];
 
