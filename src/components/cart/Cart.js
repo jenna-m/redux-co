@@ -6,6 +6,7 @@ import {
     minusQuantity, 
     removeItem 
 } from '../../actions/actions';
+import Item from '../shopping/item';
 import Empty from './Empty';
 import Checkout from './Checkout';
 
@@ -47,11 +48,23 @@ class Cart extends React.Component {
                     <div>
                         <li className="cart-item-card">
                             <div className="cart-item-image">
-                                <img src={item.img} alt={item.title} />
+                                <Link to = {{
+                                    pathname: `/products/${item.category}/${item.subcat}`,
+                                    search: `?id=${item.id}`,
+                                    }}
+                                    component={ Item }>
+                                    <img src={item.img} alt={item.title} />
+                                </Link>
                             </div>
 
                             <div className="cart-item-info">
-                                <span className="cart-title">{item.title}</span>
+                                <Link to = {{
+                                    pathname: `/products/${item.category}/${item.subcat}`,
+                                    search: `?id=${item.id}`,
+                                    }}
+                                    component={ Item }>
+                                    <span className="cart-title">{item.title}</span>
+                                </Link>
                                 <p class="cart-item-price">${item.price} ea.</p>
                                 <p class="cart-item-qty">Qty: {item.quantity}</p>
 
