@@ -49,9 +49,9 @@ const cartReducer = (state = initState, action) => {
     if (action.type === REMOVE_ITEM) {
         let itemToRemove = state.addedItems.find(item => action.id === item.id);
         let newItems = state.addedItems.filter(item => action.id !== item.id);
-
         let newSubTotal = state.subTotal - (itemToRemove.price * itemToRemove.quantity);
         console.log(itemToRemove);
+
         return {
             ...state,
             addedItems: newItems,
@@ -63,7 +63,10 @@ const cartReducer = (state = initState, action) => {
     // If item quantity is increased, increase quantity by 1 and recalculate subTotal and cartTotal
     if (action.type === ADD_QUANTITY) {
         const addedItem = state.items.find(item => item.id === action.id);
-        const updatedItems = state.addedItems.map(item => item.id === action.id ? {...item, quantity: item.quantity + 1 } : item);
+        const updatedItems = state.addedItems.map(item => item.id === action.id 
+            ? {...item, quantity: item.quantity + 1 }
+            : item
+        );
         let newSubTotal = state.subTotal + addedItem.price;
         
         return {
@@ -78,7 +81,10 @@ const cartReducer = (state = initState, action) => {
     if (action.type === MINUS_QUANTITY) {
         let subtractedItem = state.items.find(item => item.id === action.id);
         if (subtractedItem.quantity === 1) {
-            const updatedItems = state.addedItems.map(item => item.id === action.id ? {...item, quantity: item.quantity - 1 } : item);
+            const updatedItems = state.addedItems.map(item => item.id === action.id 
+                ? {...item, quantity: item.quantity - 1 } 
+                : item
+            );
             let newSubTotal = state.subTotal - subtractedItem.price;
             return {
                 ...state,
@@ -87,8 +93,11 @@ const cartReducer = (state = initState, action) => {
                 cartTotal: newSubTotal
             }
         } else {
-            subtractedItem.quantity -= 1;
-            const updatedItems = state.addedItems.map(item => item.id === action.id ? {...item, quantity: item.quantity - 1 } : item);
+            subtractedItem.quantity -=1;
+            const updatedItems = state.addedItems.map(item => item.id === action.id
+                ? {...item, quantity: item.quantity - 1 } 
+                : item
+            );
             let newSubTotal = state.subTotal - subtractedItem.price;
             return {
                 ...state,
