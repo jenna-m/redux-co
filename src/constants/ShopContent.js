@@ -40,6 +40,36 @@ import Item39 from '../images/Item39.jpg';
 import Item40 from '../images/Item40.jpg';
 import Item41 from '../images/Item41.jpg';
 import Item42 from '../images/Item42.jpg';
+import Item43 from '../images/Item43.jpg';
+import Item44 from '../images/Item44.jpg';
+import Item45 from '../images/Item45.jpg';
+import Item46 from '../images/Item46.jpg';
+import Item47 from '../images/Item47.jpg';
+import Item48 from '../images/Item48.jpg';
+import Item49 from '../images/Item49.jpg';
+import Item50 from '../images/Item50.jpg';
+import Item51 from '../images/Item51.jpg';
+import Item52 from '../images/Item52.jpg';
+import Item53 from '../images/Item53.jpg';
+import Item54 from '../images/Item54.jpg';
+import Item55 from '../images/Item55.jpg';
+import Item56 from '../images/Item56.jpg';
+import Item57 from '../images/Item57.jpg';
+import Item58 from '../images/Item58.jpg';
+import Item59 from '../images/Item59.jpg';
+import Item60 from '../images/Item60.jpg';
+import Item61 from '../images/Item61.jpg';
+import Item62 from '../images/Item62.jpg';
+import Item63 from '../images/Item63.jpg';
+import Item64 from '../images/Item64.jpg';
+import Item65 from '../images/Item65.jpg';
+import Item66 from '../images/Item66.jpg';
+import Item67 from '../images/Item67.jpg';
+import Item68 from '../images/Item68.jpg';
+import Item69 from '../images/Item69.jpg';
+import Item70 from '../images/Item70.jpg';
+import Item71 from '../images/Item71.jpg';
+import Item72 from '../images/Item72.jpg';
 
 export const ShopContent = [
     { 
@@ -236,7 +266,7 @@ export const ShopContent = [
         id: 20,
         title: 'Ex-Boyfriend Shirt in Seconda Plaid',
         desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        price: 90,
+        price: 70,
         img: Item20,
         category: 'clothing',
         subcat: 'tops',
@@ -461,8 +491,308 @@ export const ShopContent = [
         category: 'accessories',
         subcat: 'purses',
         sale: false
+    },
+    {
+        id: 43,
+        title: 'Carina Boots',
+        desc: 'Eget nunc lobortis mattis aliquam faucibus purus. Nibh praesent tristique magna sit amet purus gravida quis.',
+        price: 140,
+        img: Item43,
+        category: 'shoes',
+        subcat: 'boots',
+        sale: false
+    },
+    {
+        id: 44,
+        title: 'Side-Button A-Line Skirt in Feline Floral',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 50,
+        img: Item44,
+        category: 'clothing',
+        subcat: 'skirts',
+        sale: false
+    },
+    {
+        id: 45,
+        title: 'Lily Whipstitch Sandals',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 120,
+        img: Item45,
+        category: 'shoes',
+        subcat: 'heels',
+        sale: false
+    },
+    { 
+        id: 46, 
+        title: 'Penfield Kasson Jacket', 
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        price: 180,
+        img: Item46,
+        category: 'clothing',
+        subcat: 'jackets',
+        sale: false
+    },
+    {
+        id: 47,
+        title: 'Meadow Shirt',
+        desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        price: 40,
+        img: Item47,
+        category: 'clothing',
+        subcat: 'tops',
+        sale: false
+    },
+    {
+        id: 48,
+        title: 'Denim Pleat-Waist Midi Dress',
+        desc: 'Posuere morbi leo urna molestie at elementum eu facilisis sed. At auctor urna nunc id cursus metus. Eu consequat ac felis donec et odio pellentesque.',
+        price: 110,
+        img: Item48,
+        category: 'clothing',
+        subcat: 'dresses',
+        sale: false
+    },
+    {
+        id: 49,
+        title: 'Redwing Moc Lace-Up Boots',
+        desc: 'Dui sapien eget mi proin sed libero. Pharetra pharetra massa massa ultricies. Nisi scelerisque eu ultrices vitae auctor eu augue. Blandit cursus risus at ultrices.',
+        price: 180,
+        img: Item49,
+        category: 'shoes',
+        subcat: 'boots',
+        sale: false
+    },
+    {
+        id: 50,
+        title: 'Pacifica Maxi Dress',
+        desc: 'Eget nunc lobortis mattis aliquam faucibus purus. Nibh praesent tristique magna sit amet purus gravida quis.',
+        price: 130,
+        img: Item50,
+        category: 'clothing',
+        subcat: 'dresses',
+        sale: false
+    },
+    {
+        id: 51,
+        title: 'Cashmere Sweatshirt in Vernon Stripe',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 110,
+        img: Item51,
+        category: 'clothing',
+        subcat: 'sweaters',
+        sale: false
+    },
+    { 
+        id: 52, 
+        title: 'Baez Pullover Sweater', 
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        price: 90,
+        img: Item52,
+        category: 'clothing',
+        subcat: 'sweaters',
+        sale: false
+    },
+    {
+        id: 53,
+        title: 'Tavi Slingback Sandals',
+        desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        price: 80,
+        img: Item53,
+        category: 'shoes',
+        subcat: 'sandals',
+        sale: false
+    },
+    {
+        id: 54,
+        title: 'Large Suede Organizer Pouch',
+        desc: 'Posuere morbi leo urna molestie at elementum eu facilisis sed. At auctor urna nunc id cursus metus. Eu consequat ac felis donec et odio pellentesque.',
+        price: 120,
+        img: Item54,
+        category: 'accessories',
+        subcat: 'purses',
+        sale: false
+    },
+    {
+        id: 55,
+        title: 'Elena Slingback Sandals',
+        desc: 'Dui sapien eget mi proin sed libero. Pharetra pharetra massa massa ultricies. Nisi scelerisque eu ultrices vitae auctor eu augue. Blandit cursus risus at ultrices.',
+        price: 110,
+        img: Item55,
+        category: 'shoes',
+        subcat: 'sandals',
+        sale: false
+    },
+    {
+        id: 56,
+        title: 'Hammered Pendant Necklace',
+        desc: 'Eget nunc lobortis mattis aliquam faucibus purus. Nibh praesent tristique magna sit amet purus gravida quis.',
+        price: 30,
+        img: Item56,
+        category: 'accessories',
+        subcat: 'jewelry',
+        sale: false
+    },
+    {
+        id: 57,
+        title: 'Ribbed Mockneck Top in Sailor Stripe',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 40,
+        img: Item57,
+        category: 'clothing',
+        subcat: 'tops',
+        sale: false
+    },
+    {
+        id: 58,
+        title: 'Transport Rucksack',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 140,
+        img: Item58,
+        category: 'accessories',
+        subcat: 'purses',
+        sale: false
+    },
+    {
+        id: 59,
+        title: 'Button-Back Easy Dress in Rainbow Stripe',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 110,
+        img: Item59,
+        category: 'clothing',
+        subcat: 'dresses',
+        sale: false
+    },
+    {
+        id: 60,
+        title: 'Observatory Hoop Earrings',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 30,
+        img: Item60,
+        category: 'accessories',
+        subcat: 'jewelry',
+        sale: false
+    },
+    {
+        id: 61,
+        title: 'Whisper Cotton Turtleneck in Eastleigh Stripe',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 40,
+        img: Item61,
+        category: 'clothing',
+        subcat: 'tops',
+        sale: false
+    },
+    {
+        id: 62,
+        title: 'Fringe Statement Earrings',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 40,
+        img: Item62,
+        category: 'accessories',
+        subcat: 'jewelry',
+        sale: false
+    },
+    {
+        id: 63,
+        title: 'Ex-Boyfriend Long-Sleeve Tee Dress',
+        desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+        price: 90,
+        img: Item63,
+        category: 'clothing',
+        subcat: 'dresses',
+        sale: false
+    },
+    {
+        id: 64,
+        title: 'Wish Me Luck Whisper Cotton Crewneck Tee',
+        desc: 'Posuere morbi leo urna molestie at elementum eu facilisis sed. At auctor urna nunc id cursus metus. Eu consequat ac felis donec et odio pellentesque.',
+        price: 30,
+        img: Item64,
+        category: 'clothing',
+        subcat: 'tops',
+        sale: false
+    },
+    {
+        id: 65,
+        title: 'Ex-Boyfriend Muscle Tank',
+        desc: 'Dui sapien eget mi proin sed libero. Pharetra pharetra massa massa ultricies. Nisi scelerisque eu ultrices vitae auctor eu augue. Blandit cursus risus at ultrices.',
+        price: 30,
+        img: Item65,
+        category: 'clothing',
+        subcat: 'tops',
+        sale: false
+    },
+    {
+        id: 66,
+        title: 'Tulip-Sleeve Maxi Dress in Tall Sunflowers',
+        desc: 'Eget nunc lobortis mattis aliquam faucibus purus. Nibh praesent tristique magna sit amet purus gravida quis.',
+        price: 140,
+        img: Item66,
+        category: 'clothing',
+        subcat: 'dresses',
+        sale: false
+    },
+    {
+        id: 67,
+        title: 'Rigid Denim A-Line Mini Skirt',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 70,
+        img: Item67,
+        category: 'clothing',
+        subcat: 'skirts',
+        sale: false
+    },
+    {
+        id: 68,
+        title: 'Minimalist Ankle Rain Boots',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 140,
+        img: Item68,
+        category: 'shoes',
+        subcat: 'boots',
+        sale: false
+    },
+    {
+        id: 69,
+        title: 'Abroad Shoulder Bag',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 110,
+        img: Item69,
+        category: 'accessories',
+        subcat: 'purses',
+        sale: false
+    },
+    {
+        id: 70,
+        title: 'Patio Button-Front Midi Skirt',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 90,
+        img: Item70,
+        category: 'clothing',
+        subcat: 'skirts',
+        sale: false
+    },
+    {
+        id: 71,
+        title: 'Leah Boots',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 120,
+        img: Item71,
+        category: 'shoes',
+        subcat: 'boots',
+        sale: false
+    },
+    {
+        id: 72,
+        title: 'Boardwalk Woven Lace-Up Sandals',
+        desc: 'Quisque egestas diam in arcu. Amet risus nullam eget felis. Faucibus a pellentesque sit amet. Morbi leo urna molestie at elementum eu.',
+        price: 40,
+        img: Item72,
+        category: 'shoes',
+        subcat: 'sandals',
+        sale: false
     }
 ];
 
-// Update every time item is added to store
-export const numberOfItems = 42;
+// Update every time item is added to store (used in randomItem component)
+export const numberOfItems = 72;
