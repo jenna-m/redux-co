@@ -22,18 +22,18 @@ class RandomItem extends React.Component {
 
     render() {
         // Generate random messaging
-        let phrases = [
+        const phrases = [
             'Looking for',
             'In search of',
             'How about',
             'Need some',
         ]
-        let randomNum = random(3);
-        let randomPhrase = phrases[randomNum];
+        const randomNum = random(3);
+        const randomPhrase = phrases[randomNum];
 
         // Find random item (based on ID)
-        let randomItemID = random(numberOfItems - 1);
-        let randomItem = this.props.items.map(item => {
+        const randomItemID = random(numberOfItems);
+        const randomItem = this.props.items.map(item => {
             if (item.id === randomItemID) {
                 return (
                     <div className="random-item-container">
