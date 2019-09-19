@@ -56,6 +56,8 @@ button {
   font-family: 'Futura', sans-serif;
   letter-spacing: .4em;
   font-size: .6em;
+  font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
@@ -76,8 +78,10 @@ button:hover {
   border: 1px solid #000000;
   color: #000000;
   font-family: 'Futura', sans-serif;
-  letter-spacing: .4em;
-  font-size: .8em;
+  letter-spacing: .2em;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   transition: background-color .2s ease-in-out .1s, color .2s ease-in-out .1s;
@@ -532,7 +536,7 @@ ul.menu > li ul li {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  padding-bottom: 25px;
+  padding-bottom: 50px;
 }
 
 .cart-item-image{
@@ -603,7 +607,7 @@ ul.menu > li ul li {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .shipping-message h3 {
@@ -627,7 +631,7 @@ input[type="radio"] {
 }
 
 
-/* Checkout button */
+/* Checkout */
 .checkout {
   display: flex;
   flex-wrap: wrap;
@@ -659,7 +663,7 @@ input[type="radio"] {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
   font-size: 1em;
-  letter-spacing: .06em;
+  letter-spacing: .02em;
   line-height: 1.6em;
 }
 
