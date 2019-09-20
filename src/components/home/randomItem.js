@@ -39,23 +39,26 @@ class RandomItem extends React.Component {
                     <div className="random-item-container">
                         <div className="random-item-message">
                             <h1>{randomPhrase} {item.subcat}?</h1>
-                            <div className="see-more">
+                        </div>
+                        <div className="random-item-content">
+                        <div className="see-more">
                                 <ul>
-                                    <li><Link to={`/${item.subcat}`}>Browse all {item.subcat}</Link></li>
+                                    <li><Link to={`/${item.subcat}`}>Browse {item.subcat}</Link></li>
                                     <li><Link to={`/${item.category}`}>Browse all {item.category}</Link></li>
                                     <li><Link to="/all-items">Browse everything else</Link></li>
                                 </ul>
                             </div>
-                        </div>
-                        <div className="random-item-card" key={item.id}>
-                            <div className="random-item-image">
-                                <Link to = {{
-                                        pathname: `/products/${item.category}/${item.subcat}`,
-                                        search: `?id=${item.id}`,
-                                    }}
-                                    component={ Item }>
-                                        <img src={item.img} alt={item.title} />
-                                </Link>
+                            <div className="random-item-card" key={item.id}>
+                                <div className="random-item-image">
+                                    <Link to = {{
+                                            pathname: `/products/${item.category}/${item.subcat}`,
+                                            search: `?id=${item.id}`,
+                                        }}
+                                        component={ Item }>
+                                            <img src={item.img} alt={item.title} />
+                                            <span className="random-item-title">{item.title}</span>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
