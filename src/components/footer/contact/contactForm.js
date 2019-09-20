@@ -1,7 +1,6 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import axios from 'axios';
 
 const schema = yup.object().shape({
     name: yup.string().required('Name required'),
@@ -10,33 +9,6 @@ const schema = yup.object().shape({
 });
 
 class ContactForm extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            data: null
-        }
-
-        this.callBackendAPI = this.callBackendAPI.bind(this);
-    }
-
-    componentDidMount() {
-        // Call fetch function below when component mounts
-        this.callBackendAPI()
-            .then(res => this.setState({ data: res.express }))
-            .catch(err => console.log(err));
-    }
-
-    // Fetch the GET route from Express server
-    callBackendAPI = async () => {
-        const response = await fetch('/express_backend');
-        const body = await response.json();
-
-        if (response.status !== 200) {
-            throw Error(body.message)
-        } return body;
-    }
-
     render() {
         return (
             <div className="contact-form-content">
@@ -49,24 +21,10 @@ class ContactForm extends React.Component {
                         message: '' 
                     }}
                     onSubmit={(values, { setSubmitting }) => {
-                        alert('Form submitted!');
                         setTimeout(() => {
-                            // axios POST
-                            const appURL = 'http://localhost:3001/contact'
-                            axios.post(appURL, {
-                                name: values.name,
-                                email: values.email,
-                                message: values.message
-                            })
-                            .then(function (response) {
-                                console.log(response);
-                            })
-                            .catch(function (error) {
-                                console.log(error);
-                            });
-
+                            alert(JSON.stringify(values, null, 2));
                             setSubmitting(false);
-                        }, 400)
+                        }, 400);
                     }}
                     >
                         {({ isSubmitting }) => (
