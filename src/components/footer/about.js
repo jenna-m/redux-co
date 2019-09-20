@@ -6,10 +6,13 @@ class About extends React.Component {
             <div className="about">
                 <h1>About</h1>
                 <p>
-                    Redux Co. is a fictitious store, made up by me (<a href="https://github.com/jenna-m" target="new">jenna-m</a>). This came about after following a tutorial for creating a shopping cart app using React-Redux. I wanted to get more out of the tutorial, so I expanded upon it with the help of Google, StackOverflow, and GitHub. 
+                    Redux Co. is a fictitious store, made up by me (<a href="https://github.com/jenna-m" target="new">jenna-m</a>). This came about after following a <a href="https://medium.com/@ayabellazreg/make-a-simple-shopping-cart-app-using-react-redux-1-3-fefde93e80c7" target="new">three-part tutorial</a> for creating a shopping cart app using React and Redux.
                 </p>
                 <p>
-                    Expanding off the tutorial, I've added more items and item details pages, implemented categories, provided different shipping options, took user experience into consideration, and basically made it my own. Although this isn't a fully functioning online storefront (i.e., there is no backend, sizing options, or complete checkout process), I'm extremely satisfied with the results and what I've learned so far and may revisit this project in the future.
+                    It was my first time building an app with Redux, and I wanted to get more out of the tutorial. I expanded upon it with the help of Google, StackOverflow, and GitHub. I've added more items and item details pages, revamped the cart display, implemented categories, took user experience into consideration, and basically made it my own.
+                </p>
+                <p>
+                    Although this isn't a fully functioning online storefront (i.e., there are no sizing options, and there is no backend or complete checkout process), I'm extremely satisfied with the results and what I've learned so far. I may revisit this project in the future to add a backend and make it fully functional.
                 </p>
                 <p>
                     All shop content (images & item names) was taken from <a href="https://madewell.com" target="new">Madewell</a>. Without their items, I would have had a pretty tough time curating a store.
