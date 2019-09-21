@@ -292,7 +292,7 @@ ul.menu > li ul li {
 }
 
 .see-more {
-  font-size: .7em;
+  font-size: .75em;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -388,8 +388,16 @@ ul.menu > li ul li {
 }
 
 ._404-item-message h2 {
-  margin: 30px;
+  margin: 40px;
   font-size: 1.8em;
+}
+
+._404-item-message h3 {
+  margin: 20px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
 }
 
 ._404-item-content {
@@ -402,7 +410,7 @@ ul.menu > li ul li {
 }
 
 ._404-see-more {
-  font-size: .7em;
+  font-size: .75em;
   font-weight: 600;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -852,8 +860,6 @@ Form button {
     text-decoration: none;
   }
 
-
-
   .menu li {
     margin-right: 10px;
     font-size: .7em;
@@ -1002,7 +1008,7 @@ Form button {
   }
 
   .see-more {
-    font-size: .6em;
+    font-size: .75em;
     font-weight: 600;
     letter-spacing: .08em;
     text-transform: uppercase;
@@ -1065,6 +1071,77 @@ Form button {
   .github a {
     color: #dddddd;
     text-decoration: underline;
+  }
+
+
+  /* 404 Page */
+  ._404-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  ._404-item-message {
+    width: 100%;
+  }
+
+  ._404-item-message h1 {
+    margin: 30px;
+    font-size: 2em;
+  }
+
+  ._404-item-message h2 {
+    margin: 20px;
+    font-size: 1.2em;
+  }
+
+  ._404-item-message h3 {
+    margin: 20px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  ._404-item-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  ._404-see-more {
+    font-size: .75em;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  ._404-see-more ul {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.2em;
+  }
+
+  ._404-item-card {
+    width: 75%;
+  }
+
+  ._404-item-image img {
+    width: 100%;
+  }
+
+  ._404-item-title {
+    display: none;
   }
 
 
