@@ -33,7 +33,7 @@ class AllItems extends React.Component {
 
         return (
             <div className="new-arrivals-container">
-                <h1>Everything</h1>
+                <h1>Everything We've Got</h1>
                 <div className="new-arrivals-items">
                     {itemList}
                 </div>
