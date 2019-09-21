@@ -8,7 +8,7 @@ class Footer extends React.Component {
                 <div className="footer">
                     <div classname="social">
                         <ul>
-                            <li className="heading">Connect w/ Us</li>
+                            <li className="heading">Connect</li>
                             <li><a href="/"><i class="fa fa-facebook-f"></i> Facebook</a></li>
                             <li><a href="/"><i class="fa fa-instagram"></i> Instagram</a></li>
                             <li><a href="/"><i class="fa fa-twitter"></i> Twitter</a></li>
@@ -30,7 +30,7 @@ class Footer extends React.Component {
                     </div>
                     <div className="shop-links">
                         <ul>
-                            <li className="heading">Any Questions?</li>
+                            <li className="heading"> Questions?</li>
                             <li><Link exact to="/about">About</Link></li>
                             <li><Link exact to="/contact">Contact Us</Link></li>
                         </ul>
