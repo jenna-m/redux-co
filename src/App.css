@@ -97,8 +97,6 @@ button:hover {
 
 /* Navigation Bar */
 .navbar {
-  margin: 0;
-  padding: 0;
   width: 100%;
   background-color: #000000;
   color: #ffffff;
@@ -112,7 +110,9 @@ button:hover {
 }
 
 .brand-logo {
-  padding: 25px 50px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
   color: #ffffff;
   font-weight: 600;
   text-decoration: none;
@@ -126,7 +126,7 @@ button:hover {
 }
 
 .menu li {
-  margin-right: 45px;
+  margin-right: 30px;
 }
 
 .menu a {
@@ -179,6 +179,8 @@ ul.menu > li ul li {
 }
 
 .dropdown {
+  position: absolute;
+  z-index: 1000;
   width: 100%;
   padding-top: 30px;
   padding-left: 0px;
@@ -234,11 +236,11 @@ ul.menu > li ul li {
   font-size: .7em;
   letter-spacing: .1em;
   font-style: italic;
-  color: #ffffff;
+  color:rgba(255, 255, 255, 0.5);
 }
 
 .home-hero span a {
-  color: #ffffff;
+  color:rgba(255, 255, 255, 0.5);
   text-decoration: underline;
 }
 
@@ -531,16 +533,16 @@ ul.menu > li ul li {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-items: center;
   align-content: center;
   width: 100%;
 }
 
 .cart-items {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  align-content: center;
-  width: 50%;
+  align-items: center;
+  width: 100%;
 }
 
 .cart-item-card {
@@ -548,21 +550,21 @@ ul.menu > li ul li {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  align-content: center;
+  width: 50%;
   padding-bottom: 50px;
 }
 
 .cart-item-image{
-  width: 30%;
+  width: 50%;
 }
 
 .cart-item-image img {
-  width: 100%;
+  width: 70%;
 }
 
 .cart-item-info {
-  width: 60%;
+  width: 45%;
   font-size: .7em;
 }
 
@@ -596,6 +598,7 @@ ul.menu > li ul li {
   flex-direction: column;
   align-items: center;
   margin-bottom: 75px;
+  width: 100%;
 }
 
   .empty-cart-message p {
@@ -759,8 +762,6 @@ Form button {
 @media only screen and (max-width: 600px) {
   /* Navigation Bar */
   .navbar {
-    margin: 0;
-    padding: 0;
     width: 100%;
     background-color: #000000;
     color: #ffffff;
@@ -774,21 +775,20 @@ Form button {
   }
 
   .brand-logo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
     color: #ffffff;
     font-weight: 600;
     text-decoration: none;
   }
 
-  .menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+
 
   .menu li {
-    margin-right: 11px;
+    margin-right: 10px;
     font-size: .7em;
+    line-height: 1.5em;
   }
 
   .menu a {
@@ -841,8 +841,10 @@ Form button {
   }
 
   .dropdown {
+    position: absolute;
+    z-index: 1000;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 30px;
     padding-left: 0px;
     background-color: #000000;
   }
