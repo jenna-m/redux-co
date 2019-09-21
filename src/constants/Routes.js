@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from '../components/home/home';
-
+import NotFound from '../components/navbar/404';
 import NewArrivals from '../components/shopping/newArrivals';
 import AllItems from '../components/shopping/allItems';
 
@@ -32,7 +32,7 @@ import Contact from '../components/footer/contact/contact';
 export const Routes = 
             <div>
                 <Route exact path="/" component={ Home } />
-                
+                <Route component={ NotFound } />
                 <Route path="/new-arrivals" component={ NewArrivals } />
                 <Route path="/all-items" component={ AllItems } />
 

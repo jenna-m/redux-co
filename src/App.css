@@ -367,6 +367,75 @@ ul.menu > li ul li {
 }
 
 
+/* 404 Page */
+._404-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 0px;
+}
+
+._404-item-message {
+  width: 100%;
+}
+
+._404-item-message h1 {
+  margin: 30px;
+  font-size: 2.8em;
+}
+
+._404-item-message h2 {
+  margin: 30px;
+  font-size: 1.8em;
+}
+
+._404-item-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+}
+
+._404-see-more {
+  font-size: .7em;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+._404-see-more ul {
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 3em;
+}
+
+._404-item-card {
+  width: 38%;
+  text-align: center;
+}
+
+._404-item-image img {
+  width: 100%;
+}
+
+._404-item-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: .75em;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: .07em;
+  color: #1a1a1d;
+}
+
+
 /* New Arrivals View */
 .new-arrivals-container {
   display: flex;
