@@ -41,7 +41,7 @@ class Clothing extends React.Component {
 
         return (
             <div className="category-container">
-                <h1>Clothing</h1>
+                <h1>ALl Clothing</h1>
                 <div className="category-items">
                     {itemList}
                 </div>

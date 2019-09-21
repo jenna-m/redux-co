@@ -39,7 +39,7 @@ class Accessories extends React.Component {
 
         return (
             <div className="category-container">
-                <h1>Accessories</h1>
+                <h1>All Accessories</h1>
                 <div className="category-items">
                     {itemList}
                 </div>
