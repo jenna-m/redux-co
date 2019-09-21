@@ -586,9 +586,9 @@ ul.menu > li ul li {
 
 .add-minus-btn {
   cursor: pointer;
-  padding: 5px;
+  padding: 10px;
   color: #1a1a1d;
-  font-size: 1.15rem;
+  font-size: .9rem;
 }
 
 
@@ -1031,12 +1031,12 @@ Form button {
     width: 95%;
   }
   
-  .item-details-breadcrumb {
+  .breadcrumb {
     padding: 0px;
     width: 100%;
   }
   
-  .item-details-breadcrumb li {
+  .breadcrumb li {
     display: inline;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
@@ -1045,7 +1045,7 @@ Form button {
     color: #1a1a1d;
   }
   
-  .item-details-breadcrumb li+li:before {
+  .breadcrumb li+li:before {
     padding: 1.2em;
     color: #dddddd;
     content: "|";
