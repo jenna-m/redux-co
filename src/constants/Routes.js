@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+
 import Home from '../components/home/home';
-import NotFound from '../components/navbar/404';
 import NewArrivals from '../components/shopping/newArrivals';
 import AllItems from '../components/shopping/allItems';
 
@@ -29,34 +29,40 @@ import Cart from '../components/cart/Cart';
 import About from '../components/footer/about';
 import Contact from '../components/footer/contact/contact';
 
+import NotFound from '../components/navbar/404';
+
 export const Routes = 
             <div>
-                <Route exact path="/" component={ Home } />
-                <Route component={ NotFound } />
-                <Route path="/new-arrivals" component={ NewArrivals } />
-                <Route path="/all-items" component={ AllItems } />
-
-                <Route path="/clothing" component={ Clothing } />
-                <Route path="/tops" component={ Tops } />
-                <Route path="/sweaters" component={ Sweaters } />
-                <Route path="/jackets" component={ Jackets } />
-                <Route path="/denim" component={ Denim } />
-                <Route path="/skirts" component={ Skirts } />
-                <Route path="/dresses" component={ Dresses } />
-
-                <Route path="/shoes" component={ Shoes } />
-                <Route path="/boots" component={ Boots } />
-                <Route path="/heels" component={ Heels } />
-                <Route path="/sandals" component={ Sandals } />
-
-                <Route path="/accessories" component={ Accessories } />
-                <Route path="/purses" component={ Purses } />
-                <Route path="/jewelry" component={ Jewelry } />
-                <Route path="/eyewear" component={ Eyewear } />
-
-                <Route path="/products" component={ Item } />
-                <Route path="/cart" component={ Cart } />
-
-                <Route path="/about" component={ About } />
-                <Route path="/contact" component={ Contact } />
+                <Switch>
+                    {/* Home, New Arrivals, All Items Routing */}
+                    <Route exact path="/" component={ Home } />
+                    <Route path="/new-arrivals" component={ NewArrivals } />
+                    <Route path="/all-items" component={ AllItems } />
+                    {/* Clothing Routing */}
+                    <Route path="/clothing" component={ Clothing } />
+                    <Route path="/tops" component={ Tops } />
+                    <Route path="/sweaters" component={ Sweaters } />
+                    <Route path="/jackets" component={ Jackets } />
+                    <Route path="/denim" component={ Denim } />
+                    <Route path="/skirts" component={ Skirts } />
+                    <Route path="/dresses" component={ Dresses } />
+                    {/* Shoes Routing */}
+                    <Route path="/shoes" component={ Shoes } />
+                    <Route path="/boots" component={ Boots } />
+                    <Route path="/heels" component={ Heels } />
+                    <Route path="/sandals" component={ Sandals } />
+                    {/* Accessories Routing */}
+                    <Route path="/accessories" component={ Accessories } />
+                    <Route path="/purses" component={ Purses } />
+                    <Route path="/jewelry" component={ Jewelry } />
+                    <Route path="/eyewear" component={ Eyewear } />
+                    {/* Item and Cart View Routing */}
+                    <Route path="/products" component={ Item } />
+                    <Route path="/cart" component={ Cart } />
+                    {/* Footer Routing */}
+                    <Route path="/about" component={ About } />
+                    <Route path="/contact" component={ Contact } />
+                    {/* 404 Routing */}
+                    <Route component={ NotFound } />
+                </Switch>
             </div>
