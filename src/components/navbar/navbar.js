@@ -1,5 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Navbar extends React.Component {
     render() {
@@ -35,7 +37,7 @@ class Navbar extends React.Component {
                                 <li className="sublink"><Link to="/eyewear">Eyewear</Link></li>
                             </ul>
                         </li>
-                        <li class="bag-ico"><NavLink to="/cart"><i class="fa fa-shopping-bag"></i></NavLink></li>
+                        <li class="bag-ico"><NavLink to="/cart"><FontAwesomeIcon icon={faShoppingBag} /></NavLink></li>
                     </ul>
                 </div>
             </nav>

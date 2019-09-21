@@ -9,6 +9,9 @@ import {
 import Item from '../shopping/item';
 import Empty from './Empty';
 import Checkout from './Checkout';
+import { faPlus, faMinus, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const mapStateToProps = (state) => {
     return {
@@ -68,17 +71,14 @@ class Cart extends React.Component {
                                 <p class="cart-item-qty">Qty: {item.quantity}</p>
 
                                 <Link to="/cart">
-                                    <span class="add-minus-btn"><i class="fa fa-plus-circle"
-                                    onClick={ () => {this.handleAddQuantity(item.id)} }
-                                    ></i></span>
+                                    <span class="add-minus-btn"><FontAwesomeIcon icon={faPlus} 
+                                    onClick={ () => {this.handleAddQuantity(item.id)} } /></span>
                                 </Link>
                                 <Link to="/cart">
-                                <span class="add-minus-btn"><i class="fa fa-minus-circle" 
-                                    onClick={ () => {this.handleMinusQuantity(item.id)} }
-                                    ></i></span>
+                                <span class="add-minus-btn"><FontAwesomeIcon icon={faMinus} 
+                                    onClick={ () => {this.handleMinusQuantity(item.id)} } /></span>
                                 </Link>
-                                <span class="add-minus-btn"><i class="fa fa-times-circle" 
-                                onClick={ () => {this.handleRemoveItem(item.id)} }></i></span>
+                                <span class="add-minus-btn"><FontAwesomeIcon icon={faTimes} onClick={ () => {this.handleRemoveItem(item.id)} }/></span>
                             </div>
                         </li>
                 
