@@ -45,7 +45,7 @@ class Item extends React.Component {
                     />
                 </div>
                 <div className="item-details-info">
-                    <ul className="item-details-breadcrumb">
+                    <ul className="breadcrumb">
                         <li><Link to={`/${item.category}`}>{item.category}</Link></li>
                         <li><Link to={`/${item.subcat}`}>{item.subcat}</Link></li>
                     </ul>
