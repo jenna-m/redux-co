@@ -45,7 +45,6 @@ class Cart extends React.Component {
         let addedItems = this.props.items.length ? (
             this.props.items.map(item => {
                 return (
-                    <div>
                         <li className="cart-item-card">
                             <div className="cart-item-image">
                                 <Link to = {{
@@ -82,13 +81,13 @@ class Cart extends React.Component {
                                 onClick={ () => {this.handleRemoveItem(item.id)} }></i></span>
                             </div>
                         </li>
-                    </div>
+                
                 )
             })
         ):
         // If there are no items in cart, display the Empty component
         (
-            <Empty />
+                <Empty />
         )
 
         return (
