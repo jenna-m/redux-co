@@ -25,8 +25,8 @@ class NotFound extends React.Component {
         const phrases = [
             'Did you mean',
             'Maybe you meant',
-            'We can\'t find that... how about',
             'Perhaps you\'re looking for',
+            'Were you looking for'
         ]
         const randomNum = random(3);
         const randomPhrase = phrases[randomNum];
@@ -38,7 +38,8 @@ class NotFound extends React.Component {
                 return (
                     <div className="_404-item-container">
                         <div className="_404-item-message">
-                            <h2>Whoops! {randomPhrase} "{item.subcat}"?</h2>
+                            <h2>Whoops! We couldn't find that...</h2>
+                            <h3>{randomPhrase} "{item.subcat}"?</h3>
                         </div>
                         <div className="_404-item-content">
                         <div className="_404-see-more">
@@ -68,7 +69,7 @@ class NotFound extends React.Component {
 
         return (
             <div className="_404-container">
-                <h1>404 Not Found</h1>
+                <h1>404</h1>
                 {randomItem}
             </div> 
         );
