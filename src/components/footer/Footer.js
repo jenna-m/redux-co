@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Footer extends React.Component {
     render() {
@@ -38,7 +40,7 @@ class Footer extends React.Component {
                 </div>
 
                 <div className="github">
-                    <p>Built with <span className="love-ico"><i class="fa fa-heart"></i></span> by <a href="https://github.com/jenna-m">jenna-m</a>. Hosted on GitHub.</p>
+                    <p>Built with <span className="love-ico"><FontAwesomeIcon icon={faHeart} /></span> by <a href="https://github.com/jenna-m">jenna-m</a>. Hosted on GitHub.</p>
                 </div>
             </div>
         );
