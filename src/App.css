@@ -546,12 +546,12 @@ ul.menu > li ul li {
   width: 40%;
 }
 
-.item-details-breadcrumb {
+.breadcrumb {
   padding: 0px;
   width: 100%;
 }
 
-.item-details-breadcrumb li {
+.breadcrumb li {
   display: inline;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
@@ -560,7 +560,7 @@ ul.menu > li ul li {
   color: #1a1a1d;
 }
 
-.item-details-breadcrumb li+li:before {
+.breadcrumb li+li:before {
   padding: 1.5em;
   color: #dddddd;
   content: "|";
