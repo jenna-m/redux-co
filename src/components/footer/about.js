@@ -20,14 +20,14 @@ class About extends React.Component {
                 <p>
                     So, what went into this project?
                     <ul>
-                        <li><a href="https://reactjs.org/" target="new"></a>React</li>
-                        <li><a href="https://redux.js.org/" target="new"></a>Redux</li>
-                        <li><a href="https://github.com/rt2zz/redux-persist" target="new"></a>redux-persist</li>
-                        <li><a href="https://github.com/ReactTraining/react-router" target="new"></a>react-router</li>
-                        <li><a href="https://github.com/adamrisberg/react-image-magnifiers" target="new"></a>react-image-magnifiers</li>
-                        <li><a href="https://lodash.com/" target="new"></a>Lodash</li>
-                        <li><a href="https://github.com/jaredpalmer/formik" target="new"></a>Formik</li>
-                        <li><a href="https://github.com/jquense/yup" target="new"></a>Yup</li>
+                        <li><a href="https://reactjs.org/" target="new">React</a></li>
+                        <li><a href="https://redux.js.org/" target="new">Redux</a></li>
+                        <li><a href="https://github.com/rt2zz/redux-persist" target="new">redux-persist</a></li>
+                        <li><a href="https://github.com/ReactTraining/react-router" target="new">react-router</a></li>
+                        <li><a href="https://github.com/adamrisberg/react-image-magnifiers" target="new">react-image-magnifiers</a></li>
+                        <li><a href="https://lodash.com/" target="new">Lodash</a></li>
+                        <li><a href="https://github.com/jaredpalmer/formik" target="new">Formik</a></li>
+                        <li><a href="https://github.com/jquense/yup" target="new">Yup</a></li>
                         <li>And a whole lot of CSS</li>
                     </ul>
                 </p>
