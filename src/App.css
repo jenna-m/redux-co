@@ -1186,13 +1186,13 @@ Form button {
     display: inline;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    font-size: .7em;
+    font-size: .85em;
     letter-spacing: .09em;
     color: #1a1a1d;
   }
   
   .breadcrumb li+li:before {
-    padding: 1.2em;
+    padding: 1em;
     color: #dddddd;
     content: "|";
   }
