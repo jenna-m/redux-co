@@ -3,16 +3,23 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 
 const schema = yup.object().shape({
-    name: yup.string().required('Name required'),
-    email: yup.string().email().required('Valid email required'),
-    message: yup.string().min(10).max(600).required('Message required')
+    name: yup.string()
+        .min(2, 'Name must be at least 2 characters')
+        .max(50, 'Name cannot be over 50 characters')
+        .required('Name required'),
+    email: yup.string()
+        .email('Valid email required')
+        .required('Email required'),
+    message: yup.string()
+        .min(10, 'Message must be at least 10 characters')
+        .max(600, 'Message cannot be over 600 characters')
+        .required('Message required')
 });
 
 class ContactForm extends React.Component {
     render() {
         return (
             <div className="contact-form-content">
-                <p className="App-intro">{this.state.data}</p>
                 <Formik
                     validationSchema={schema}
                     initialValues={{
