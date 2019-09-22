@@ -20,16 +20,15 @@ class About extends React.Component {
                 <p>
                     So, what went into this project?
                     <ul>
-                        <li>React</li>
-                        <li>Redux</li>
-                        <li>redux-persist</li>
-                        <li>react-router</li>
-                        <li>react-image-magnifiers</li>
-                        <li>Lodash</li>
-                        <li>Formik</li>
-                        <li>Yup</li>
-                        <li>Nodemailer</li>
-                        <li>A whole lot of CSS (& flexbox)</li>
+                        <li><a href="https://reactjs.org/" target="new"></a>React</li>
+                        <li><a href="https://redux.js.org/" target="new"></a>Redux</li>
+                        <li><a href="https://github.com/rt2zz/redux-persist" target="new"></a>redux-persist</li>
+                        <li><a href="https://github.com/ReactTraining/react-router" target="new"></a>react-router</li>
+                        <li><a href="https://github.com/adamrisberg/react-image-magnifiers" target="new"></a>react-image-magnifiers</li>
+                        <li><a href="https://lodash.com/" target="new"></a>Lodash</li>
+                        <li><a href="https://github.com/jaredpalmer/formik" target="new"></a>Formik</li>
+                        <li><a href="https://github.com/jquense/yup" target="new"></a>Yup</li>
+                        <li>And a whole lot of CSS</li>
                     </ul>
                 </p>
                 <p>
