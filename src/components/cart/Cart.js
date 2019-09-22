@@ -7,8 +7,8 @@ import {
     removeItem 
 } from '../../actions/actions';
 import Item from '../shopping/item';
-import Empty from './Empty';
-import Checkout from './Checkout';
+import Empty from './empty';
+import Checkout from './checkout';
 import { faPlus, faMinus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
