@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { random } from 'lodash';
-import { numberOfItems } from '../../constants/ShopContent'; // Total # of items in shop
+import { numberOfItems } from '../../constants/shopContent'; // Total # of items in shop
 import Item from '../shopping/item';
 
 const mapStateToProps = (state) => {

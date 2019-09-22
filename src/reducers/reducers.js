@@ -1,4 +1,4 @@
-import { ShopContent } from '../constants/ShopContent';
+import { ShopContent } from '../constants/shopContent';
 import { 
     ADD_TO_CART,
     REMOVE_ITEM, 
@@ -8,7 +8,7 @@ import {
     SUBTRACT_SHIPPING,
     shippingCost,
     ADD_PICKUP,
-} from '../constants/ActionTypes';
+} from '../constants/actionTypes';
 
 const initState = {
     items: ShopContent,

@@ -4,7 +4,7 @@ import {
     Link,
     withRouter
 } from 'react-router-dom';
-import { numberOfItems } from '../../constants/ShopContent'; // Total # of items in shop
+import { numberOfItems } from '../../constants/shopContent'; // Total # of items in shop
 import Item from './item';
 
 const mapStateToProps = (state) => {

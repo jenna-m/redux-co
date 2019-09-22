@@ -24,7 +24,7 @@ import Jewelry from '../components/shopping/accessories/jewelry';
 import Eyewear from '../components/shopping/accessories/eyewear';
 
 import Item from '../components/shopping/item';
-import Cart from '../components/cart/Cart';
+import Cart from '../components/cart/cart';
 
 import About from '../components/footer/about';
 import Contact from '../components/footer/contact/contact';

@@ -4,7 +4,7 @@ import {
     ADD_QUANTITY, 
     MINUS_QUANTITY,
     CHANGE_SIZE,
-} from '../constants/ActionTypes';
+} from '../constants/actionTypes';
 
 export const addToCart = (id) => {
     return { type: ADD_TO_CART, id }

@@ -5,7 +5,7 @@ import {
     SUBTRACT_SHIPPING,
     shippingCost,
     ADD_PICKUP
-} from '../../constants/ActionTypes';
+} from '../../constants/actionTypes';
 
 const mapStateToProps = (state) => {
     return {

@@ -7,8 +7,8 @@ import { persistor, store } from '../src/store/configureStore';
 import './App.css';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
-import ScrollToTop from './components/ScrollToTop';
-import { Routes } from './constants/Routes';
+import ScrollToTop from './components/scrollToTop';
+import { Routes } from './constants/routes';
 
 
 class App extends React.Component {
