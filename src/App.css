@@ -1343,4 +1343,14 @@ Form button {
     letter-spacing: .1em;
     line-height: .75em;
   }
+
+  /* Contact Form */
+  Form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-items: space-between;
+    width: 90%;
+  }
 }
