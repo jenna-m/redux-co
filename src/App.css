@@ -633,7 +633,7 @@ ul.menu > li ul li {
 }
 
 .cart-item-image{
-  width: 50%;
+  width: 60%;
 }
 
 .cart-item-image img {
@@ -641,7 +641,7 @@ ul.menu > li ul li {
 }
 
 .cart-item-info {
-  width: 45%;
+  width: 35%;
   font-size: .7em;
 }
 
