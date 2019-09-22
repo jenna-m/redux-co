@@ -1,7 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import {
+    faFacebookF,
+    faInstagram,
+    faTwitter,
+    faPinterestP
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Font Awesome icons
+const facebookIcon = <FontAwesomeIcon icon={faFacebookF} />;
+const instagramIcon = <FontAwesomeIcon icon={faInstagram} />;
+const twitterIcon = <FontAwesomeIcon icon={faTwitter} />;
+const pinterestIcon = <FontAwesomeIcon icon={faPinterestP} />;
+const heartIcon = <FontAwesomeIcon icon={faHeart} />;
+
 
 class Footer extends React.Component {
     render() {
@@ -11,10 +25,10 @@ class Footer extends React.Component {
                     <div classname="social">
                         <ul>
                             <li className="heading">Connect</li>
-                            <li><a href="/"><i class="fa fa-facebook-f"></i> Facebook</a></li>
-                            <li><a href="/"><i class="fa fa-instagram"></i> Instagram</a></li>
-                            <li><a href="/"><i class="fa fa-twitter"></i> Twitter</a></li>
-                            <li><a href="/"><i class="fa fa-pinterest-p"></i> Pinterest</a></li>
+                            <li><a href="/">{ facebookIcon } Facebook</a></li>
+                            <li><a href="/">{ instagramIcon } Instagram</a></li>
+                            <li><a href="/">{ twitterIcon } Twitter</a></li>
+                            <li><a href="/">{ pinterestIcon } Pinterest</a></li>
                         </ul>
                     </div>
                     <div className="location">
@@ -40,7 +54,7 @@ class Footer extends React.Component {
                 </div>
 
                 <div className="github">
-                    <p>Built with <span className="love-ico"><FontAwesomeIcon icon={faHeart} /></span> by <a href="https://github.com/jenna-m">jenna-m</a>. Hosted on GitHub.</p>
+                    <p>Built with <span className="love-ico">{ heartIcon }</span> by <a href="https://github.com/jenna-m">jenna-m</a>.</p>
                 </div>
             </div>
         );

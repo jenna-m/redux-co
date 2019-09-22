@@ -3,6 +3,9 @@ import { NavLink, Link } from 'react-router-dom';
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// Font Awesome icons
+const bagIcon = <FontAwesomeIcon icon={ faShoppingBag } />
+
 class Navbar extends React.Component {
     render() {
         return(
@@ -37,7 +40,7 @@ class Navbar extends React.Component {
                                 <li className="sublink"><Link to="/eyewear">Eyewear</Link></li>
                             </ul>
                         </li>
-                        <li class="bag-ico"><NavLink to="/cart"><FontAwesomeIcon icon={faShoppingBag} /></NavLink></li>
+                        <li class="bag-ico"><NavLink to="/cart">{bagIcon}</NavLink></li>
                     </ul>
                 </div>
             </nav>
