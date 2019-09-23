@@ -9,5 +9,3 @@ The project started when I followed a tutorial for building a simple shopping ca
 My favorite feature/component is the `RandomItem` component that is displayed on the home page and used in the 404 routing. I thought it would be a good fit for the home page so that users could quickly get an idea of what this store sells, and I think integrates well with the 404 page in attempting to get the lost user back on track. A random message is also displayed with the random item; the messages displayed on the Home page and 404 page are different. For me, it was refreshing to have a spark of an idea like this, be able to bring it to life, and see it fully functioning!
 
 Enjoy!
-
-* As of right now (9-23-2019), refreshing a page beside the home page renders a 404 page. I also need to implement my custom 404 routing that was working on `localhost:3000`. 😅
