@@ -1,13 +1,11 @@
 # redux Co.
 _An online storefront built with React and Redux_
 
-## Live Demo
+## Demos
 Check out the live demo of the website, deployed on Netlify, <a href="https://redux-co.netlify.com" target="new">here</a>.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ff36ee74-8b79-41c2-907c-01ce3396fad1/deploy-status)](https://app.netlify.com/sites/redux-co/deploys)
 
-
-## Gif Demos
 **Home Page Demo**
 
 ![homePageDemo.gif](https://s3.gifyu.com/images/homePageDemo.gif)
