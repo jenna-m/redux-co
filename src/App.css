@@ -1145,6 +1145,48 @@ Form button {
   }
 
 
+  /* Category View */
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+  }
+
+  .category-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .category-item-card {
+    flex-basis: auto;
+    width: 100%;
+    margin-bottom: 75px;
+  }
+
+  .category-item-image img {
+    width: 100%;
+  }
+
+  .category-item-title {
+    text-transform: uppercase;
+    font-size: .95em;
+    font-weight: 550;
+    letter-spacing: .1em;
+  }
+
+  .category-item-price {
+    font-family: 'Georgia', Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: .95em;
+    line-height: .1em;
+  }
+
+
   /* Item Details View */
   .item-details {
     display: flex;
