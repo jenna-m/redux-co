@@ -12,9 +12,9 @@ class Navbar extends React.Component {
             <nav className="navbar" role="navigation">
                 <div className="nav-container">
                     <NavLink exact to="/" className="brand-logo">redux Co.</NavLink>
-                    <ul class="menu">
+                    <ul className="menu">
                         <li>
-                            <li className="menu-category"><Link to="/clothing">Clothing</Link></li>
+                            <div className="menu-category"><Link to="/clothing">Clothing</Link></div>
                             <ul className="dropdown">
                                 <li className="sublink"><Link to="/tops">Tops</Link></li>
                                 <li className="sublink"><Link to="/sweaters">Sweaters</Link></li>
@@ -25,7 +25,7 @@ class Navbar extends React.Component {
                             </ul>
                         </li>
                         <li>
-                            <li className="menu-category"><Link to="/shoes">Shoes</Link></li>
+                            <div className="menu-category"><Link to="/shoes">Shoes</Link></div>
                             <ul className="dropdown">
                                 <li className="sublink"><Link to="/boots">Boots</Link></li>
                                 <li className="sublink"><Link to="/heels">Heels</Link></li>
@@ -33,14 +33,14 @@ class Navbar extends React.Component {
                             </ul>
                         </li>
                         <li>
-                            <li className="menu-category"><Link to="/accessories">Accessories</Link></li>
+                            <div className="menu-category"><Link to="/accessories">Accessories</Link></div>
                             <ul className="dropdown">
                                 <li className="sublink"><Link to="/purses">Purses</Link></li>
                                 <li className="sublink"><Link to="/jewelry">Jewelry</Link></li>
                                 <li className="sublink"><Link to="/eyewear">Eyewear</Link></li>
                             </ul>
                         </li>
-                        <li class="bag-ico"><NavLink to="/cart">{bagIcon}</NavLink></li>
+                        <li className="bag-ico"><NavLink to="/cart">{bagIcon}</NavLink></li>
                     </ul>
                 </div>
             </nav>

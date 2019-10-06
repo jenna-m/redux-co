@@ -4,7 +4,6 @@ import {
     Link,
     withRouter
 } from 'react-router-dom';
-import Item from '../item';
 
 const mapStateToProps = (state) => {
     return {
@@ -16,6 +15,7 @@ class Clothing extends React.Component {
     render() {
         let itemList = this.props.items.map(item => {
             if (item.category === 'clothing') {
+                console.log(item);
                 return (
                     <div className="category-item-card" key={item.id}>
                         <div className="category-item-image">
@@ -23,9 +23,8 @@ class Clothing extends React.Component {
                                 to = {{
                                     pathname: `/products/${item.category}`,
                                     search: `?id=${item.id}`,
-                                }}
-                                component={ Item }>
-                                    <img src={item.img} alt={item.title} />
+                                }}>
+                                <img src={item.img} alt={item.title} />
                             </Link>
                         </div>
                         <div className="category-item-info">
@@ -41,7 +40,7 @@ class Clothing extends React.Component {
 
         return (
             <div className="category-container">
-                <h1>ALl Clothing</h1>
+                <h1>All Clothing</h1>
                 <div className="category-items">
                     {itemList}
                 </div>

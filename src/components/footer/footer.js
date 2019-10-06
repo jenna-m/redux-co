@@ -22,7 +22,7 @@ class Footer extends React.Component {
         return (
             <div>
                 <div className="footer">
-                    <div classname="social">
+                    <div className="social">
                         <ul>
                             <li className="heading">Connect</li>
                             <li><a href="/">{ facebookIcon } Facebook</a></li>

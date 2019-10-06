@@ -34,6 +34,7 @@ class NewArrivals extends React.Component {
                     </div>
                 )
             }
+            return <React.Fragment />;
         })
 
         return (

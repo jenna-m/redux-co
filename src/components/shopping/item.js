@@ -35,6 +35,8 @@ class Item extends React.Component {
 
     render() {
         let item = this.state.item;
+        if (!item) return null;
+        
         return (
             <div className="item-details" key={item.id}>
                 <div className="item-details-img">

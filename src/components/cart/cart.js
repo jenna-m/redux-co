@@ -33,17 +33,18 @@ const mapDispatchToProps = (dispatch) => {
 
 class Cart extends React.Component {
     // Increase item quantity
-    handleAddQuantity = (id) => {
+    handleAddQuantity = ({id}) => {
         this.props.addQuantity(id);
     }
 
     // Decrease item quantity
-    handleMinusQuantity = (id) => {
-        this.props.minusQuantity(id);
+    handleMinusQuantity = ({id, quantity}) => {
+        if (quantity > 0)
+            this.props.minusQuantity(id);
     }
 
     // Remove item
-    handleRemoveItem = (id) => {
+    handleRemoveItem = ({id}) => {
         this.props.removeItem(id);
     }
 
@@ -75,12 +76,12 @@ class Cart extends React.Component {
                                 <p class="cart-item-qty">Qty: {item.quantity}</p>
 
                                 <Link to="/cart">
-                                    <span class="add-minus-btn" onClick={ () => {this.handleAddQuantity(item.id)} }>{ plusIcon }</span>
+                                    <span class="add-minus-btn" onClick={ () => {this.handleAddQuantity(item)} }>{ plusIcon }</span>
                                 </Link>
                                 <Link to="/cart">
-                                <span class="add-minus-btn" onClick={ () => {this.handleMinusQuantity(item.id)} }>{ minusIcon }</span>
+                                <span class="add-minus-btn" onClick={ () => {this.handleMinusQuantity(item)} }>{ minusIcon }</span>
                                 </Link>
-                                <span class="add-minus-btn" onClick={ () => {this.handleRemoveItem(item.id)} }>{ deleteIcon }</span>
+                                <span class="add-minus-btn" onClick={ () => {this.handleRemoveItem(item)} }>{ deleteIcon }</span>
                             </div>
                         </li>
                 
