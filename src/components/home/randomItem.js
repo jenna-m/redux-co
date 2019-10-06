@@ -64,7 +64,7 @@ class RandomItem extends React.Component {
                     </div>
                 )
             }
-            return <React.Fragment />;
+            return null;
         })
 
         return (
