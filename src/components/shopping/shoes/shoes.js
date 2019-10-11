@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 
 class Shoes extends React.Component {
     render() {
-        let itemList = this.props.items.map(item =>{
+        let itemList = this.props.items.map(item => {
             if (item.category === 'shoes') {
                 return (
                     <div className="category-item-card" key={item.id}>
@@ -34,7 +34,8 @@ class Shoes extends React.Component {
                         </div>
                     </div>
                 )
-            }
+            } 
+            return null;
         })
 
         return (

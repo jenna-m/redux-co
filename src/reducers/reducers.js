@@ -92,7 +92,7 @@ const cartReducer = (state = initState, action) => {
                 subTotal: newSubTotal,
                 cartTotal: newSubTotal
             }
-        } else {
+        } else if (subtractedItem.quantity !== 0) {
             subtractedItem.quantity -=1;
             const updatedItems = state.addedItems.map(item => item.id === action.id
                 ? {...item, quantity: item.quantity - 1 } 

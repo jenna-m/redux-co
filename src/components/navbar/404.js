@@ -1,12 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 import { random } from 'lodash';
 import { numberOfItems } from '../../constants/shopContent'; // Total # of items in shop
 import Item from '../shopping/item';
-
-const e = React.createElement;
 
 const mapStateToProps = (state) => {
     return {
@@ -68,6 +65,7 @@ class NotFound extends React.Component {
                     </div>
                 )
             }
+            return null;
         })
 
         return (
@@ -78,8 +76,5 @@ class NotFound extends React.Component {
         );
     }
 }
-
-const domContainer = document.querySelector('._404-component');
-ReactDOM.render(e(NotFound), domContainer);
 
 export default connect(mapStateToProps)(withRouter(NotFound));
