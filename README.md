@@ -4,7 +4,7 @@ _An online storefront built with React and Redux_
 ## Demos
 Check out the live demo of the website, deployed on Netlify, <a href="https://redux-co.netlify.com" target="new">here</a>.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ff36ee74-8b79-41c2-907c-01ce3396fad1/deploy-status)](https://app.netlify.com/sites/redux-co/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ff36ee74-8b79-41c2-907c-01ce3396fad1/deploy-status)](https://app.netlify.com/sites/redux-co/deploys) [![Greenkeeper badge](https://badges.greenkeeper.io/jenna-m/redux-co.svg)](https://greenkeeper.io/)
 
 **Home Page Demo**
 
