@@ -16,10 +16,10 @@
     "react-image-magnifiers": "^1.1.1",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
+    "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "redux-persist": "^6.0.0",
-    "redux-persist-transform-filter": "0.0.18",
+    "redux-persist-transform-filter": "0.0.20",
     "yup": "^0.27.0"
   },
   "scripts": {
